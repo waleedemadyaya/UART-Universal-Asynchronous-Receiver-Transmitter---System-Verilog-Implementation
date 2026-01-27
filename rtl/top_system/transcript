@@ -1370,3 +1370,1811 @@ do run.do
 # Break in Module SYS_TOP_TBBBB at SYS_TOP_TB.sv line 163
 # 0 ps
 # 25624072352 ps
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vmap 2024.1 Lib Mapping Utility 2024.02 Feb  1 2024
+# vmap work work 
+# Modifying modelsim.ini
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:14 on Jan 27,2026
+# vlog -reportprogress 300 -sv SYS_PACKAGE.sv 
+# -- Compiling package SYS_PACKAGE
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:25:14 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:14 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../uart_tx_rx/FSM.sv ../uart_tx_rx/FSM_controller.sv ../uart_tx_rx/RX.sv ../uart_tx_rx/TX.sv ../uart_tx_rx/Tx_Rx_Wrapper.sv ../uart_tx_rx/Tx_Rx_Wrapper_tb.sv ../uart_tx_rx/UART_PACKAGE.sv ../uart_tx_rx/data_sampling.sv ../uart_tx_rx/deserializer.sv ../uart_tx_rx/edge_bit_counter.sv ../uart_tx_rx/mux4_1.sv ../uart_tx_rx/parity_calc.sv ../uart_tx_rx/parity_check.sv ../uart_tx_rx/serializer.sv ../uart_tx_rx/start_check.sv ../uart_tx_rx/stop_check.sv 
+# -- Compiling package FSM_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module fsm_controller
+# -- Compiling package FSM_controller_sv_unit
+# -- Compiling module FSM_controller
+# -- Compiling package RX_sv_unit
+# -- Compiling module UART_RX
+# -- Compiling package TX_sv_unit
+# -- Compiling module UART_TX
+# -- Compiling module latche_data
+# -- Compiling package UART_PACKAGE
+# -- Compiling package Tx_Rx_Wrapper_sv_unit
+# -- Importing package UART_PACKAGE
+# -- Compiling module Tx_Rx_Wrapper
+# -- Compiling module Tx_Rx_Wrapper_tb
+# -- Compiling package UART_PACKAGE
+# ** Warning: ../uart_tx_rx/UART_PACKAGE.sv(1): (vlog-2275) Existing package 'UART_PACKAGE' at line 1 will be overwritten.
+# -- Compiling package data_sampling_sv_unit
+# -- Compiling module data_sampling
+# -- Compiling package deserializer_sv_unit
+# -- Compiling module deserializer
+# -- Compiling package edge_bit_counter_sv_unit
+# -- Compiling module edge_bit_counter
+# -- Compiling module mux_4_1
+# -- Compiling package parity_calc_sv_unit
+# -- Compiling module parity_calc
+# -- Compiling module parity_check
+# -- Compiling package serializer_sv_unit
+# -- Compiling module serializer
+# -- Compiling module strt_check
+# -- Compiling module stp_check
+# 
+# Top level modules:
+# 	Tx_Rx_Wrapper_tb
+# End time: 23:25:14 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:14 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../puls_gen/puls_gen.sv 
+# -- Compiling module PULSE_GEN
+# 
+# Top level modules:
+# 	PULSE_GEN
+# End time: 23:25:14 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:14 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../reset_synch/reset_synch.sv 
+# -- Compiling module RST_SYNC
+# 
+# Top level modules:
+# 	RST_SYNC
+# End time: 23:25:14 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:15 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../reg_file/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 23:25:15 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:15 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../alu/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:25:15 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:15 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../data_synch/data_sync.sv 
+# -- Compiling module Data_Sync
+# 
+# Top level modules:
+# 	Data_Sync
+# End time: 23:25:15 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:15 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../clock_gating/clock_gating.sv 
+# -- Compiling module clock_gating
+# 
+# Top level modules:
+# 	clock_gating
+# End time: 23:25:15 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:15 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../clock_divider/clk_div.sv 
+# -- Compiling module clk_div
+# 
+# Top level modules:
+# 	clk_div
+# End time: 23:25:15 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:16 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../asynch_fifo/fifo1.sv ../asynch_fifo/fifomem.sv ../asynch_fifo/rptr_empty.sv ../asynch_fifo/sync_r2w.sv ../asynch_fifo/sync_w2r.sv ../asynch_fifo/wptr_full.sv 
+# -- Compiling module fifo1
+# -- Compiling module fifomem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# 
+# Top level modules:
+# 	fifo1
+# End time: 23:25:16 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:16 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/reg_file_fsm/reg_file_fsm.sv 
+# -- Compiling module reg_file_fsm
+# 
+# Top level modules:
+# 	reg_file_fsm
+# End time: 23:25:16 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:16 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/alu_fsm/alu_fsm.sv 
+# -- Compiling module alu_fsm
+# 
+# Top level modules:
+# 	alu_fsm
+# End time: 23:25:16 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:16 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/top_fsm/top_fsm.sv 
+# -- Compiling module top_fsm
+# 
+# Top level modules:
+# 	top_fsm
+# End time: 23:25:16 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:16 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/sys_controller.sv 
+# -- Compiling package sys_controller_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module SYS_CTRL
+# 
+# Top level modules:
+# 	SYS_CTRL
+# End time: 23:25:16 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:17 on Jan 27,2026
+# vlog -reportprogress 300 -sv top_sys.sv 
+# -- Compiling package top_sys_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module SYS_TOP
+# -- Compiling module clk_multiplier
+# 
+# Top level modules:
+# 	SYS_TOP
+# 	clk_multiplier
+# End time: 23:25:17 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:25:17 on Jan 27,2026
+# vlog -reportprogress 300 -sv SYS_TOP_TB.sv 
+# -- Compiling module SYS_TOP_TBBBB
+# 
+# Top level modules:
+# 	SYS_TOP_TBBBB
+# End time: 23:25:17 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:25:20 on Jan 27,2026, Elapsed time: 0:03:42
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.SYS_TOP_TBBBB 
+# Start time: 23:25:20 on Jan 27,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.SYS_TOP_TBBBB(fast)
+# Loading work.SYS_PACKAGE(fast)
+# Loading work.top_sys_sv_unit(fast)
+# Loading work.SYS_TOP(fast)
+# Loading work.RST_SYNC(fast)
+# Loading work.reg_file_sv_unit(fast)
+# Loading work.reg_file(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.clock_gating(fast)
+# Loading work.sys_controller_sv_unit(fast)
+# Loading work.SYS_CTRL(fast)
+# Loading work.top_fsm(fast)
+# Loading work.alu_fsm(fast)
+# Loading work.reg_file_fsm(fast)
+# Loading work.clk_div(fast)
+# Loading work.TX_sv_unit(fast)
+# Loading work.UART_TX(fast)
+# Loading work.FSM_controller_sv_unit(fast)
+# Loading work.FSM_controller(fast)
+# Loading work.serializer_sv_unit(fast)
+# Loading work.serializer(fast)
+# Loading work.parity_calc_sv_unit(fast)
+# Loading work.parity_calc(fast)
+# Loading work.mux_4_1(fast)
+# Loading work.latche_data(fast)
+# Loading work.RX_sv_unit(fast)
+# Loading work.UART_RX(fast)
+# Loading work.FSM_sv_unit(fast)
+# Loading work.fsm_controller(fast)
+# Loading work.data_sampling_sv_unit(fast)
+# Loading work.data_sampling(fast)
+# Loading work.edge_bit_counter_sv_unit(fast)
+# Loading work.edge_bit_counter(fast)
+# Loading work.parity_check(fast)
+# Loading work.strt_check(fast)
+# Loading work.stp_check(fast)
+# Loading work.deserializer_sv_unit(fast)
+# Loading work.deserializer(fast)
+# Loading work.Data_Sync(fast)
+# Loading work.PULSE_GEN(fast)
+# Loading work.fifo1(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.fifomem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.wptr_full(fast)
+# hexadecimal
+# 
+# ==========================================
+#         TEST BENCH STARTED
+# ==========================================
+# 
+# [INFO] Test Configuration:
+#   - DATA_WIDTH_TB = 8
+#   - ADDR_WIDTH_TB = 4
+#   - REF_CLK_PER   = 20 ns (50 MHz)
+#   - UART_CLK_PER  = 271.267 ns (3.6864 MHz)
+# 
+# [PHASE] System Initialization
+# [TASK] Initializing signals...
+# [TASK] Initialization complete
+# [INFO] Signals initialized to default values
+# 
+# [PHASE] System Reset
+# [TASK] Starting reset sequence...
+# [TASK] Reset asserted
+# [TASK] Reset deasserted
+# [TASK] Reset sequence completed
+# [INFO] Reset sequence completed
+# 
+# ==========================================
+#     TEST CONFIGURATION 1: DEFAULT
+# ==========================================
+# [CONFIG] PRESCALE: 32, Parity: ENABLED, Type: EVEN
+# 
+# [TEST] WRITE COMMAND TEST
+#   - Address: 0x06, Data: 0xA5
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x06
+#   Data: 0xa5
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x06
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x06) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0xa5
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xa5) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [CHECK] Verifying WRITE operation...
+#   Expected: Address 0x06 = Data 0xa5
+# [CHECK] Write Enable detected
+# [PASS] Write Operation SUCCESSFUL
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE=32
+# 
+# [TEST] READ COMMAND TEST
+#   - Address: 0x02
+# [CMD] Sending READ command...
+#   Command: 0xbb (RD_CMD)
+#   Address: 0x02
+# [UART_TX] Loading frame: 0xbb
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xbb) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] READ command transmission complete
+# [CHECK] Verifying READ operation...
+#   Reading from Address: 0x02
+#   Expected Data: 0x81
+# [CHECK] Detected start of UART transmission
+# [PASS] Read Operation SUCCESSFUL
+#   Received Frame: 0x502
+#   Expected Frame: 0x502
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE=32
+# 
+# [TEST] ALU WITH OPERANDS COMMAND
+#   - Operand A: 100, Operand B: 50, Function: Subtraction
+# [CMD] Sending ALU_WOP command...
+#   Command: 0xcc (ALU_WOP_CMD)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+#   Function: 1 (0x01)
+# [UART_TX] Loading frame: 0xcc
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xcc) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x64
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x64) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x32
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x32) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x01
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x01) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WOP command transmission complete
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 1 (0x01)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: SUBTRACTION
+# [CHECK] ALU Result: 50 (0x0032)
+# [CHECK] ALU Result Byte 0: 0x32
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x664, Expected: 0x664
+#   Received Byte 1: 0x400, Expected: 0x400
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE=32
+# [STATUS] Case_1_Done.......
+# 
+# [TEST] ALU WITHOUT OPERANDS COMMAND
+#   - Function: Addition
+# [CMD] Sending ALU_WNOP command...
+#   Command: 0xdd (ALU_WNOP_CMD)
+#   Function: 0 (0x00)
+# [UART_TX] Loading frame: 0xdd
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xdd) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x00
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x00) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WNOP command transmission complete
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 0 (0x00)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: ADDITION
+# [CHECK] ALU Result: 150 (0x0096)
+# [CHECK] ALU Result Byte 0: 0x96
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x52c, Expected: 0x52c
+#   Received Byte 1: 0x400, Expected: 0x400
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE=32
+# [STATUS] Case_2_Done.......
+# 
+# 
+# ==========================================
+#     TEST CONFIGURATION 2
+# ==========================================
+# [CONFIG] PRESCALE: 32, Parity: ENABLED, Type: ODD
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x02
+#   Data: 0x83
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x83
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x83) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_3_Done.......
+# 
+# [TEST] WRITE COMMAND TEST
+#   - Address: 0x06, Data: 0xA5
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x06
+#   Data: 0xa5
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x06
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x06) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0xa5
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xa5) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_4_Done.......
+# [CHECK] Verifying WRITE operation...
+#   Expected: Address 0x06 = Data 0xa5
+# [CHECK] Write Enable detected
+# [PASS] Write Operation SUCCESSFUL
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE=32
+# [STATUS] Case_5_Done.......
+# 
+# [TEST] READ COMMAND TEST
+#   - Address: 0x02
+# [CMD] Sending READ command...
+#   Command: 0xbb (RD_CMD)
+#   Address: 0x02
+# [UART_TX] Loading frame: 0xbb
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xbb) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] READ command transmission complete
+# [STATUS] Case_6_Done.......
+# [CHECK] Verifying READ operation...
+#   Reading from Address: 0x02
+#   Expected Data: 0x83
+# [CHECK] Detected start of UART transmission
+# [PASS] Read Operation SUCCESSFUL
+#   Received Frame: 0x506
+#   Expected Frame: 0x506
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE=32
+# [STATUS] Case_7_Done.......
+# 
+# [TEST] ALU WITH OPERANDS COMMAND
+#   - Operand A: 100, Operand B: 50, Function: Subtraction
+# [CMD] Sending ALU_WOP command...
+#   Command: 0xcc (ALU_WOP_CMD)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+#   Function: 1 (0x01)
+# [UART_TX] Loading frame: 0xcc
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xcc) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x64
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x64) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x32
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x32) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x01
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x01) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WOP command transmission complete
+# [STATUS] Case_8_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 1 (0x01)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: SUBTRACTION
+# [CHECK] ALU Result: 50 (0x0032)
+# [CHECK] ALU Result Byte 0: 0x32
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x464, Expected: 0x464
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE=32
+# [STATUS] Case_9_Done.......
+# 
+# [TEST] ALU WITHOUT OPERANDS COMMAND
+#   - Function: Addition
+# [CMD] Sending ALU_WNOP command...
+#   Command: 0xdd (ALU_WNOP_CMD)
+#   Function: 0 (0x00)
+# [UART_TX] Loading frame: 0xdd
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xdd) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x00
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x00) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WNOP command transmission complete
+# [STATUS] Case_10_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 0 (0x00)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: ADDITION
+# [CHECK] ALU Result: 150 (0x0096)
+# [CHECK] ALU Result Byte 0: 0x96
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x72c, Expected: 0x72c
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE=32
+# [STATUS] Case_11_Done.......
+# 
+# 
+# ==========================================
+#     TEST CONFIGURATION 3
+# ==========================================
+# [CONFIG] PRESCALE: 32, Parity: DISABLED
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x02
+#   Data: 0x80
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x80
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x80) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_12_Done.......
+# 
+# [TEST] WRITE COMMAND TEST
+#   - Address: 0x06, Data: 0xA5
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x06
+#   Data: 0xa5
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x06
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x06) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0xa5
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xa5) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_13_Done.......
+# [CHECK] Verifying WRITE operation...
+#   Expected: Address 0x06 = Data 0xa5
+# [CHECK] Write Enable detected
+# [PASS] Write Operation SUCCESSFUL
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE=32
+# [STATUS] Case_14_Done.......
+# 
+# [TEST] READ COMMAND TEST
+#   - Address: 0x02
+# [CMD] Sending READ command...
+#   Command: 0xbb (RD_CMD)
+#   Address: 0x02
+# [UART_TX] Loading frame: 0xbb
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xbb) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] READ command transmission complete
+# [STATUS] Case_15_Done.......
+# [CHECK] Verifying READ operation...
+#   Reading from Address: 0x02
+#   Expected Data: 0x80
+# [CHECK] Detected start of UART transmission
+# [PASS] Read Operation SUCCESSFUL
+#   Received Frame: 0x700
+#   Expected Frame: 0x700
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE=32
+# [STATUS] Case_16_Done.......
+# 
+# [TEST] ALU WITH OPERANDS COMMAND
+#   - Operand A: 100, Operand B: 50, Function: Subtraction
+# [CMD] Sending ALU_WOP command...
+#   Command: 0xcc (ALU_WOP_CMD)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+#   Function: 1 (0x01)
+# [UART_TX] Loading frame: 0xcc
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xcc) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x64
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x64) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x32
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x32) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x01
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x01) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WOP command transmission complete
+# [STATUS] Case_17_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 1 (0x01)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: SUBTRACTION
+# [CHECK] ALU Result: 50 (0x0032)
+# [CHECK] ALU Result Byte 0: 0x32
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x664, Expected: 0x664
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE=32
+# [STATUS] Case_18_Done.......
+# 
+# [TEST] ALU WITHOUT OPERANDS COMMAND
+#   - Function: Addition
+# [CMD] Sending ALU_WNOP command...
+#   Command: 0xdd (ALU_WNOP_CMD)
+#   Function: 0 (0x00)
+# [UART_TX] Loading frame: 0xdd
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xdd) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x00
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x00) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WNOP command transmission complete
+# [STATUS] Case_19_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 0 (0x00)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: ADDITION
+# [CHECK] ALU Result: 150 (0x0096)
+# [CHECK] ALU Result Byte 0: 0x96
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x72c, Expected: 0x72c
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE=32
+# [STATUS] Case_20_Done.......
+# 
+# 
+# ==========================================
+#     TEST CONFIGURATION 4
+# ==========================================
+# [CONFIG] PRESCALE: 16, Parity: ENABLED, Type: EVEN
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x02
+#   Data: 0x41
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x41
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x41) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_21_Done.......
+# 
+# [TEST] WRITE COMMAND TEST
+#   - Address: 0x06, Data: 0xA5
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x06
+#   Data: 0xa5
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x06
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x06) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0xa5
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xa5) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_22_Done.......
+# [CHECK] Verifying WRITE operation...
+#   Expected: Address 0x06 = Data 0xa5
+# [CHECK] Write Enable detected
+# [PASS] Write Operation SUCCESSFUL
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE=16
+# [STATUS] Case_23_Done.......
+# 
+# [TEST] READ COMMAND TEST
+#   - Address: 0x02
+# [CMD] Sending READ command...
+#   Command: 0xbb (RD_CMD)
+#   Address: 0x02
+# [UART_TX] Loading frame: 0xbb
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xbb) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] READ command transmission complete
+# [STATUS] Case_24_Done.......
+# [CHECK] Verifying READ operation...
+#   Reading from Address: 0x02
+#   Expected Data: 0x41
+# [CHECK] Detected start of UART transmission
+# [PASS] Read Operation SUCCESSFUL
+#   Received Frame: 0x482
+#   Expected Frame: 0x482
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE=16
+# [STATUS] Case_25_Done.......
+# 
+# [TEST] ALU WITH OPERANDS COMMAND
+#   - Operand A: 100, Operand B: 50, Function: Subtraction
+# [CMD] Sending ALU_WOP command...
+#   Command: 0xcc (ALU_WOP_CMD)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+#   Function: 1 (0x01)
+# [UART_TX] Loading frame: 0xcc
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xcc) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x64
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x64) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x32
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x32) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x01
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x01) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WOP command transmission complete
+# [STATUS] Case_26_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 1 (0x01)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: SUBTRACTION
+# [CHECK] ALU Result: 50 (0x0032)
+# [CHECK] ALU Result Byte 0: 0x32
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x664, Expected: 0x664
+#   Received Byte 1: 0x400, Expected: 0x400
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE=16
+# [STATUS] Case_27_Done.......
+# 
+# [TEST] ALU WITHOUT OPERANDS COMMAND
+#   - Function: Addition
+# [CMD] Sending ALU_WNOP command...
+#   Command: 0xdd (ALU_WNOP_CMD)
+#   Function: 0 (0x00)
+# [UART_TX] Loading frame: 0xdd
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xdd) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x00
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x00) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WNOP command transmission complete
+# [STATUS] Case_28_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 0 (0x00)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: ADDITION
+# [CHECK] ALU Result: 150 (0x0096)
+# [CHECK] ALU Result Byte 0: 0x96
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x52c, Expected: 0x52c
+#   Received Byte 1: 0x400, Expected: 0x400
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE=16
+# [STATUS] Case_29_Done.......
+# [INFO] End of Configuration 4
+# 
+# 
+# ==========================================
+#     TEST CONFIGURATION 5
+# ==========================================
+# [CONFIG] PRESCALE: 16, Parity: ENABLED, Type: ODD
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x02
+#   Data: 0x43
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x43
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x43) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_30_Done.......
+# 
+# [TEST] WRITE COMMAND TEST
+#   - Address: 0x06, Data: 0xA5
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x06
+#   Data: 0xa5
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x06
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x06) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0xa5
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xa5) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_31_Done.......
+# [CHECK] Verifying WRITE operation...
+#   Expected: Address 0x06 = Data 0xa5
+# [CHECK] Write Enable detected
+# [PASS] Write Operation SUCCESSFUL
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE=16
+# [STATUS] Case_32_Done.......
+# 
+# [TEST] READ COMMAND TEST
+#   - Address: 0x02
+# [CMD] Sending READ command...
+#   Command: 0xbb (RD_CMD)
+#   Address: 0x02
+# [UART_TX] Loading frame: 0xbb
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xbb) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] READ command transmission complete
+# [STATUS] Case_33_Done.......
+# [CHECK] Verifying READ operation...
+#   Reading from Address: 0x02
+#   Expected Data: 0x43
+# [CHECK] Detected start of UART transmission
+# [PASS] Read Operation SUCCESSFUL
+#   Received Frame: 0x486
+#   Expected Frame: 0x486
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE=16
+# [STATUS] Case_34_Done.......
+# 
+# [TEST] ALU WITH OPERANDS COMMAND
+#   - Operand A: 100, Operand B: 50, Function: Subtraction
+# [CMD] Sending ALU_WOP command...
+#   Command: 0xcc (ALU_WOP_CMD)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+#   Function: 1 (0x01)
+# [UART_TX] Loading frame: 0xcc
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xcc) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x64
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x64) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x32
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x32) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x01
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x01) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WOP command transmission complete
+# [STATUS] Case_35_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 1 (0x01)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: SUBTRACTION
+# [CHECK] ALU Result: 50 (0x0032)
+# [CHECK] ALU Result Byte 0: 0x32
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x464, Expected: 0x464
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE=16
+# [STATUS] Case_36_Done.......
+# 
+# [TEST] ALU WITHOUT OPERANDS COMMAND
+#   - Function: Addition
+# [CMD] Sending ALU_WNOP command...
+#   Command: 0xdd (ALU_WNOP_CMD)
+#   Function: 0 (0x00)
+# [UART_TX] Loading frame: 0xdd
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xdd) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x00
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x00) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WNOP command transmission complete
+# [STATUS] Case_37_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 0 (0x00)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: ADDITION
+# [CHECK] ALU Result: 150 (0x0096)
+# [CHECK] ALU Result Byte 0: 0x96
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x72c, Expected: 0x72c
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE=16
+# [STATUS] Case_38_Done.......
+# [INFO] End of Configuration 5
+# 
+# 
+# ==========================================
+#     TEST CONFIGURATION 6
+# ==========================================
+# [CONFIG] PRESCALE: 16, Parity: DISABLED
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x02
+#   Data: 0x40
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x40
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x40) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_39_Done.......
+# 
+# [TEST] WRITE COMMAND TEST
+#   - Address: 0x06, Data: 0xA5
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x06
+#   Data: 0xa5
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x06
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x06) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0xa5
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xa5) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_40_Done.......
+# [CHECK] Verifying WRITE operation...
+#   Expected: Address 0x06 = Data 0xa5
+# [CHECK] Write Enable detected
+# [PASS] Write Operation SUCCESSFUL
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE=16
+# [STATUS] Case_41_Done.......
+# 
+# [TEST] READ COMMAND TEST
+#   - Address: 0x02
+# [CMD] Sending READ command...
+#   Command: 0xbb (RD_CMD)
+#   Address: 0x02
+# [UART_TX] Loading frame: 0xbb
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xbb) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] READ command transmission complete
+# [STATUS] Case_42_Done.......
+# [CHECK] Verifying READ operation...
+#   Reading from Address: 0x02
+#   Expected Data: 0x40
+# [CHECK] Detected start of UART transmission
+# [PASS] Read Operation SUCCESSFUL
+#   Received Frame: 0x680
+#   Expected Frame: 0x680
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE=16
+# [STATUS] Case_43_Done.......
+# 
+# [TEST] ALU WITH OPERANDS COMMAND
+#   - Operand A: 100, Operand B: 50, Function: Subtraction
+# [CMD] Sending ALU_WOP command...
+#   Command: 0xcc (ALU_WOP_CMD)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+#   Function: 1 (0x01)
+# [UART_TX] Loading frame: 0xcc
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xcc) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x64
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x64) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x32
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x32) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x01
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x01) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WOP command transmission complete
+# [STATUS] Case_44_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 1 (0x01)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: SUBTRACTION
+# [CHECK] ALU Result: 50 (0x0032)
+# [CHECK] ALU Result Byte 0: 0x32
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x664, Expected: 0x664
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE=16
+# [STATUS] Case_45_Done.......
+# 
+# [TEST] ALU WITHOUT OPERANDS COMMAND
+#   - Function: Addition
+# [CMD] Sending ALU_WNOP command...
+#   Command: 0xdd (ALU_WNOP_CMD)
+#   Function: 0 (0x00)
+# [UART_TX] Loading frame: 0xdd
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xdd) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x00
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x00) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WNOP command transmission complete
+# [STATUS] Case_46_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 0 (0x00)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: ADDITION
+# [CHECK] ALU Result: 150 (0x0096)
+# [CHECK] ALU Result Byte 0: 0x96
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x72c, Expected: 0x72c
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE=16
+# [STATUS] Case_47_Done.......
+# [INFO] End of Configuration 6
+# 
+# 
+# ==========================================
+#     TEST CONFIGURATION 7
+# ==========================================
+# [CONFIG] PRESCALE: 8, Parity: ENABLED, Type: EVEN
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x02
+#   Data: 0x21
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x21
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x21) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_48_Done.......
+# 
+# [TEST] WRITE COMMAND TEST
+#   - Address: 0x06, Data: 0xA5
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x06
+#   Data: 0xa5
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x06
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x06) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0xa5
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xa5) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_49_Done.......
+# [CHECK] Verifying WRITE operation...
+#   Expected: Address 0x06 = Data 0xa5
+# [CHECK] Write Enable detected
+# [PASS] Write Operation SUCCESSFUL
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE= 8
+# [STATUS] Case_50_Done.......
+# 
+# [TEST] READ COMMAND TEST
+#   - Address: 0x02
+# [CMD] Sending READ command...
+#   Command: 0xbb (RD_CMD)
+#   Address: 0x02
+# [UART_TX] Loading frame: 0xbb
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xbb) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] READ command transmission complete
+# [STATUS] Case_51_Done.......
+# [CHECK] Verifying READ operation...
+#   Reading from Address: 0x02
+#   Expected Data: 0x21
+# [CHECK] Detected start of UART transmission
+# [PASS] Read Operation SUCCESSFUL
+#   Received Frame: 0x442
+#   Expected Frame: 0x442
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE= 8
+# [STATUS] Case_52_Done.......
+# 
+# [TEST] ALU WITH OPERANDS COMMAND
+#   - Operand A: 100, Operand B: 50, Function: Subtraction
+# [CMD] Sending ALU_WOP command...
+#   Command: 0xcc (ALU_WOP_CMD)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+#   Function: 1 (0x01)
+# [UART_TX] Loading frame: 0xcc
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xcc) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x64
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x64) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x32
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x32) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x01
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x01) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WOP command transmission complete
+# [STATUS] Case_53_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 1 (0x01)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: SUBTRACTION
+# [CHECK] ALU Result: 50 (0x0032)
+# [CHECK] ALU Result Byte 0: 0x32
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x664, Expected: 0x664
+#   Received Byte 1: 0x400, Expected: 0x400
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE= 8
+# [STATUS] Case_54_Done.......
+# 
+# [TEST] ALU WITHOUT OPERANDS COMMAND
+#   - Function: Addition
+# [CMD] Sending ALU_WNOP command...
+#   Command: 0xdd (ALU_WNOP_CMD)
+#   Function: 0 (0x00)
+# [UART_TX] Loading frame: 0xdd
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xdd) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x00
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x00) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WNOP command transmission complete
+# [STATUS] Case_55_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 0 (0x00)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: ADDITION
+# [CHECK] ALU Result: 150 (0x0096)
+# [CHECK] ALU Result Byte 0: 0x96
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x52c, Expected: 0x52c
+#   Received Byte 1: 0x400, Expected: 0x400
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=0, PRESCALE= 8
+# [STATUS] Case_56_Done.......
+# [INFO] End of Configuration 7
+# 
+# 
+# ==========================================
+#     TEST CONFIGURATION 8
+# ==========================================
+# [CONFIG] PRESCALE: 8, Parity: ENABLED, Type: ODD
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x02
+#   Data: 0x23
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x23
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x23) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_57_Done.......
+# 
+# [TEST] WRITE COMMAND TEST
+#   - Address: 0x06, Data: 0xA5
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x06
+#   Data: 0xa5
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x06
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x06) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0xa5
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xa5) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_58_Done.......
+# [CHECK] Verifying WRITE operation...
+#   Expected: Address 0x06 = Data 0xa5
+# [CHECK] Write Enable detected
+# [PASS] Write Operation SUCCESSFUL
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE= 8
+# [STATUS] Case_59_Done.......
+# 
+# [TEST] READ COMMAND TEST
+#   - Address: 0x02
+# [CMD] Sending READ command...
+#   Command: 0xbb (RD_CMD)
+#   Address: 0x02
+# [UART_TX] Loading frame: 0xbb
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xbb) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] READ command transmission complete
+# [STATUS] Case_60_Done.......
+# [CHECK] Verifying READ operation...
+#   Reading from Address: 0x02
+#   Expected Data: 0x23
+# [CHECK] Detected start of UART transmission
+# [PASS] Read Operation SUCCESSFUL
+#   Received Frame: 0x446
+#   Expected Frame: 0x446
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE= 8
+# [STATUS] Case_61_Done.......
+# 
+# [TEST] ALU WITH OPERANDS COMMAND
+#   - Operand A: 100, Operand B: 50, Function: Subtraction
+# [CMD] Sending ALU_WOP command...
+#   Command: 0xcc (ALU_WOP_CMD)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+#   Function: 1 (0x01)
+# [UART_TX] Loading frame: 0xcc
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xcc) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x64
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x64) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x32
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x32) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x01
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x01) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WOP command transmission complete
+# [STATUS] Case_62_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 1 (0x01)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: SUBTRACTION
+# [CHECK] ALU Result: 50 (0x0032)
+# [CHECK] ALU Result Byte 0: 0x32
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x464, Expected: 0x464
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE= 8
+# [STATUS] Case_63_Done.......
+# 
+# [TEST] ALU WITHOUT OPERANDS COMMAND
+#   - Function: Addition
+# [CMD] Sending ALU_WNOP command...
+#   Command: 0xdd (ALU_WNOP_CMD)
+#   Function: 0 (0x00)
+# [UART_TX] Loading frame: 0xdd
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xdd) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x00
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x00) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WNOP command transmission complete
+# [STATUS] Case_64_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 0 (0x00)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: ADDITION
+# [CHECK] ALU Result: 150 (0x0096)
+# [CHECK] ALU Result Byte 0: 0x96
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x72c, Expected: 0x72c
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=1, PARITY_TYPE=1, PRESCALE= 8
+# [STATUS] Case_65_Done.......
+# [INFO] End of Configuration 8
+# 
+# 
+# ==========================================
+#     TEST CONFIGURATION 9
+# ==========================================
+# [CONFIG] PRESCALE: 8, Parity: DISABLED
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x02
+#   Data: 0x20
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Parity bit transmitted: 1
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x20
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x20) transmitted
+# [UART_TX] Parity bit transmitted: 0
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_66_Done.......
+# 
+# [TEST] WRITE COMMAND TEST
+#   - Address: 0x06, Data: 0xA5
+# [CMD] Sending WRITE command...
+#   Command: 0xaa (WR_CMD)
+#   Address: 0x06
+#   Data: 0xa5
+# [UART_TX] Loading frame: 0xaa
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xaa) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x06
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x06) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0xa5
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xa5) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] WRITE command transmission complete
+# [STATUS] Case_67_Done.......
+# [CHECK] Verifying WRITE operation...
+#   Expected: Address 0x06 = Data 0xa5
+# [CHECK] Write Enable detected
+# [PASS] Write Operation SUCCESSFUL
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE= 8
+# [STATUS] Case_68_Done.......
+# 
+# [TEST] READ COMMAND TEST
+#   - Address: 0x02
+# [CMD] Sending READ command...
+#   Command: 0xbb (RD_CMD)
+#   Address: 0x02
+# [UART_TX] Loading frame: 0xbb
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xbb) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x02
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x02) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] READ command transmission complete
+# [STATUS] Case_69_Done.......
+# [CHECK] Verifying READ operation...
+#   Reading from Address: 0x02
+#   Expected Data: 0x20
+# [CHECK] Detected start of UART transmission
+# [PASS] Read Operation SUCCESSFUL
+#   Received Frame: 0x640
+#   Expected Frame: 0x640
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE= 8
+# [STATUS] Case_70_Done.......
+# 
+# [TEST] ALU WITH OPERANDS COMMAND
+#   - Operand A: 100, Operand B: 50, Function: Subtraction
+# [CMD] Sending ALU_WOP command...
+#   Command: 0xcc (ALU_WOP_CMD)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+#   Function: 1 (0x01)
+# [UART_TX] Loading frame: 0xcc
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xcc) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x64
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x64) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x32
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x32) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x01
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x01) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WOP command transmission complete
+# [STATUS] Case_71_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 1 (0x01)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: SUBTRACTION
+# [CHECK] ALU Result: 50 (0x0032)
+# [CHECK] ALU Result Byte 0: 0x32
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x664, Expected: 0x664
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE= 8
+# [STATUS] Case_72_Done.......
+# 
+# [TEST] ALU WITHOUT OPERANDS COMMAND
+#   - Function: Addition
+# [CMD] Sending ALU_WNOP command...
+#   Command: 0xdd (ALU_WNOP_CMD)
+#   Function: 0 (0x00)
+# [UART_TX] Loading frame: 0xdd
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0xdd) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [UART_TX] Loading frame: 0x00
+# [UART_TX] Start bit transmitted
+# [UART_TX] Data bits (0x00) transmitted
+# [UART_TX] Stop bit transmitted
+# [UART_TX] Frame transmission complete
+# [CMD] ALU_WNOP command transmission complete
+# [STATUS] Case_73_Done.......
+# [CHECK] Verifying ALU operation...
+#   ALU Function: 0 (0x00)
+#   Operand A: 100 (0x64)
+#   Operand B: 50 (0x32)
+# [CHECK] Detected start of ALU result transmission (byte 0)
+# [CHECK] Detected start of ALU result transmission (byte 1)
+# [CHECK] ALU Function: ADDITION
+# [CHECK] ALU Result: 150 (0x0096)
+# [CHECK] ALU Result Byte 0: 0x96
+# [CHECK] ALU Result Byte 1: 0x00
+# [PASS] ALU Operation SUCCESSFUL
+#   Received Byte 0: 0x72c, Expected: 0x72c
+#   Received Byte 1: 0x600, Expected: 0x600
+#   Config: PARITY_ENABLE=0, PARITY_TYPE=0, PRESCALE= 8
+# [STATUS] Case_74_Done.......
+# 
+# 
+# ==========================================
+#        ALL TESTS COMPLETED SUCCESSFULLY!
+# ==========================================
+# [SUCCESS] Congratulations! All test cases passed.
+# [SUCCESS] You are a winner!
+# ==========================================
+# ** Note: $stop    : SYS_TOP_TB.sv(628)
+#    Time: 24403878430 ps  Iteration: 0  Instance: /SYS_TOP_TBBBB
+# Break in Module SYS_TOP_TBBBB at SYS_TOP_TB.sv line 628
+# 0 ps
+# 25624072352 ps
+

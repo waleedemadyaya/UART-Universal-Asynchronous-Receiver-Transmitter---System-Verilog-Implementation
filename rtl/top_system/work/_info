@@ -5,6 +5,8 @@ Z0 !s12c _opt
 Z1 !s99 nomlopt
 R0
 R1
+R0
+R1
 !s11f vlog 2024.1 2024.02, Feb  1 2024
 13
 !s112 1.1
@@ -14,10 +16,10 @@ R1
 cModel Technology
 Z2 dF:/ITI_9_Months/Projects/02_Digital_Design/SV/UART-Universal-Asynchronous-Receiver-Transmitter---System-Verilog-Implementation/rtl/top_system
 T_opt
-!s110 1769548899
-V18QYR;ka>RPmO8hmPQ?5Z3
+!s110 1769549121
+VMNjWho_@H^@?JIdEf_nEI2
 04 13 4 work SYS_TOP_TBBBB fast 0
-=1-94085341db33-69792c63-146-574c
+=1-94085341db33-69792d40-31e-5bc4
 R1
 !s12f OEM100
 !s12b OEM100
@@ -31,7 +33,7 @@ Z4 2../alu/ALU.sv
 Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 Z6 DXx4 work 11 SYS_PACKAGE 0 22 IW`m>ED5ZMQUFe[P[3M@01
 DXx4 work 11 ALU_sv_unit 0 22 MS[_nl3[88Tc8iFISom]n0
-Z7 !s110 1769548895
+Z7 !s110 1769549115
 Z8 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
@@ -44,11 +46,11 @@ R2
 Z9 w1769511484
 Z10 8../alu/ALU.sv
 Z11 F../alu/ALU.sv
-!i122 43
+!i122 59
 L0 3 44
 Z12 OL;L;2024.1;79
 31
-Z13 !s108 1769548895.000000
+Z13 !s108 1769549115.000000
 Z14 !s107 ../alu/ALU.sv|
 Z15 !s90 -reportprogress|300|-sv|../alu/ALU.sv|
 !i113 0
@@ -58,7 +60,7 @@ n@a@l@u
 valu_fsm
 2../sys_ctrl/alu_fsm/alu_fsm.sv
 R5
-Z17 !s110 1769548896
+Z17 !s110 1769549116
 !i10b 1
 !s100 i_Ef^f4RSB9_<3OB4]8B31
 I]RGXDK@RdLcL<>f2A0>S00
@@ -67,14 +69,14 @@ R2
 w1769526072
 8../sys_ctrl/alu_fsm/alu_fsm.sv
 F../sys_ctrl/alu_fsm/alu_fsm.sv
-!i122 49
+!i122 65
 L0 1 108
 R8
 R12
 r1
 !s85 0
 31
-Z18 !s108 1769548896.000000
+Z18 !s108 1769549116.000000
 !s107 ../sys_ctrl/alu_fsm/alu_fsm.sv|
 !s90 -reportprogress|300|-sv|../sys_ctrl/alu_fsm/alu_fsm.sv|
 !i113 0
@@ -97,7 +99,7 @@ R2
 R9
 R10
 R11
-!i122 43
+!i122 59
 Z19 L0 1 0
 R12
 31
@@ -111,7 +113,7 @@ n@a@l@u_sv_unit
 vclk_div
 2../clock_divider/clk_div.sv
 R5
-R17
+R7
 !i10b 1
 !s100 PfoF0ATT17dFzfVKoHVG23
 I@EV:Qd9mh=lDSAA]en2A`2
@@ -120,14 +122,14 @@ R2
 w1769546159
 8../clock_divider/clk_div.sv
 F../clock_divider/clk_div.sv
-!i122 46
+!i122 62
 L0 1 53
 R8
 R12
 r1
 !s85 0
 31
-R18
+R13
 !s107 ../clock_divider/clk_div.sv|
 !s90 -reportprogress|300|-sv|../clock_divider/clk_div.sv|
 !i113 0
@@ -138,7 +140,7 @@ Z20 2top_sys.sv
 R5
 R6
 Z21 DXx4 work 15 top_sys_sv_unit 0 22 D6FQhe?YY;<Bm@VUSCjgX3
-Z22 !s110 1769548897
+Z22 !s110 1769549117
 R8
 r1
 !s85 0
@@ -151,11 +153,11 @@ R2
 Z24 w1769544930
 Z25 8top_sys.sv
 Z26 Ftop_sys.sv
-!i122 52
+!i122 68
 L0 282 49
 R12
 31
-Z27 !s108 1769548897.000000
+Z27 !s108 1769549117.000000
 Z28 !s107 top_sys.sv|
 Z29 !s90 -reportprogress|300|-sv|top_sys.sv|
 !i113 0
@@ -164,7 +166,7 @@ R3
 vclock_gating
 2../clock_gating/clock_gating.sv
 R5
-R17
+R7
 !i10b 1
 !s100 1NFi^[idUodh7LMnN4Lzb0
 IES_3^XM[?I^l48ahD?1_;1
@@ -173,7 +175,7 @@ R2
 w1769209236
 8../clock_gating/clock_gating.sv
 F../clock_gating/clock_gating.sv
-!i122 45
+!i122 61
 L0 1 17
 R8
 R12
@@ -191,7 +193,7 @@ Z30 2../uart_tx_rx/FSM.sv|../uart_tx_rx/FSM_controller.sv|../uart_tx_rx/RX.sv|..
 R5
 R6
 DXx4 work 21 data_sampling_sv_unit 0 22 nbmZoS9Qk^khd?D^>BQTY2
-Z31 !s110 1769548894
+Z31 !s110 1769549114
 R8
 r1
 !s85 0
@@ -204,11 +206,11 @@ R2
 Z32 w1769505785
 Z33 8../uart_tx_rx/data_sampling.sv
 Z34 F../uart_tx_rx/data_sampling.sv
-!i122 39
+!i122 55
 L0 3 36
 R12
 31
-Z35 !s108 1769548894.000000
+Z35 !s108 1769549114.000000
 Z36 !s107 ../uart_tx_rx/stop_check.sv|../uart_tx_rx/start_check.sv|../uart_tx_rx/serializer.sv|../uart_tx_rx/parity_check.sv|../uart_tx_rx/parity_calc.sv|../uart_tx_rx/mux4_1.sv|../uart_tx_rx/edge_bit_counter.sv|../uart_tx_rx/deserializer.sv|../uart_tx_rx/data_sampling.sv|../uart_tx_rx/UART_PACKAGE.sv|../uart_tx_rx/Tx_Rx_Wrapper_tb.sv|../uart_tx_rx/Tx_Rx_Wrapper.sv|../uart_tx_rx/TX.sv|../uart_tx_rx/RX.sv|../uart_tx_rx/FSM_controller.sv|../uart_tx_rx/FSM.sv|
 Z37 !s90 -reportprogress|300|-sv|../uart_tx_rx/FSM.sv|../uart_tx_rx/FSM_controller.sv|../uart_tx_rx/RX.sv|../uart_tx_rx/TX.sv|../uart_tx_rx/Tx_Rx_Wrapper.sv|../uart_tx_rx/Tx_Rx_Wrapper_tb.sv|../uart_tx_rx/UART_PACKAGE.sv|../uart_tx_rx/data_sampling.sv|../uart_tx_rx/deserializer.sv|../uart_tx_rx/edge_bit_counter.sv|../uart_tx_rx/mux4_1.sv|../uart_tx_rx/parity_calc.sv|../uart_tx_rx/parity_check.sv|../uart_tx_rx/serializer.sv|../uart_tx_rx/start_check.sv|../uart_tx_rx/stop_check.sv|
 !i113 0
@@ -231,7 +233,7 @@ R2
 R32
 R33
 R34
-!i122 39
+!i122 55
 R19
 R12
 31
@@ -253,7 +255,7 @@ R2
 w1769458313
 8../data_synch/data_sync.sv
 F../data_synch/data_sync.sv
-!i122 44
+!i122 60
 L0 1 46
 R8
 R12
@@ -285,7 +287,7 @@ R2
 Z38 w1769505794
 Z39 8../uart_tx_rx/deserializer.sv
 Z40 F../uart_tx_rx/deserializer.sv
-!i122 39
+!i122 55
 L0 3 27
 R12
 31
@@ -312,7 +314,7 @@ R2
 R38
 R39
 R40
-!i122 39
+!i122 55
 R19
 R12
 31
@@ -340,7 +342,7 @@ R2
 Z41 w1769505804
 Z42 8../uart_tx_rx/edge_bit_counter.sv
 Z43 F../uart_tx_rx/edge_bit_counter.sv
-!i122 39
+!i122 55
 L0 3 52
 R12
 31
@@ -367,7 +369,7 @@ R2
 R41
 R42
 R43
-!i122 39
+!i122 55
 R19
 R12
 31
@@ -389,7 +391,7 @@ R2
 w1769507473
 8../asynch_fifo/fifo1.sv
 F../asynch_fifo/fifo1.sv
-!i122 47
+!i122 63
 L0 23 44
 R8
 R12
@@ -414,7 +416,7 @@ R2
 w1766063340
 8../asynch_fifo/fifomem.sv
 F../asynch_fifo/fifomem.sv
-!i122 47
+!i122 63
 L0 4 16
 R8
 R12
@@ -445,7 +447,7 @@ R2
 Z47 w1769505774
 Z48 8../uart_tx_rx/FSM.sv
 Z49 F../uart_tx_rx/FSM.sv
-!i122 39
+!i122 55
 L0 3 106
 R12
 31
@@ -473,7 +475,7 @@ R2
 Z50 w1769505726
 Z51 8../uart_tx_rx/FSM_controller.sv
 Z52 F../uart_tx_rx/FSM_controller.sv
-!i122 39
+!i122 55
 L0 3 101
 R12
 31
@@ -501,7 +503,7 @@ R2
 R50
 R51
 R52
-!i122 39
+!i122 55
 R19
 R12
 31
@@ -529,7 +531,7 @@ R2
 R47
 R48
 R49
-!i122 39
+!i122 55
 R19
 R12
 31
@@ -558,7 +560,7 @@ R2
 Z55 w1769532290
 Z56 8../uart_tx_rx/TX.sv
 Z57 F../uart_tx_rx/TX.sv
-!i122 39
+!i122 55
 L0 142 23
 R12
 31
@@ -580,7 +582,7 @@ R2
 w1767985004
 8../uart_tx_rx/mux4_1.sv
 F../uart_tx_rx/mux4_1.sv
-!i122 39
+!i122 55
 L0 1 26
 R8
 R12
@@ -611,7 +613,7 @@ R2
 Z58 w1769505744
 Z59 8../uart_tx_rx/parity_calc.sv
 Z60 F../uart_tx_rx/parity_calc.sv
-!i122 39
+!i122 55
 L0 3 34
 R12
 31
@@ -638,7 +640,7 @@ R2
 R58
 R59
 R60
-!i122 39
+!i122 55
 R19
 R12
 31
@@ -660,7 +662,7 @@ R2
 w1768502959
 8../uart_tx_rx/parity_check.sv
 F../uart_tx_rx/parity_check.sv
-!i122 39
+!i122 55
 L0 1 44
 R8
 R12
@@ -676,7 +678,7 @@ R3
 vPULSE_GEN
 2../puls_gen/puls_gen.sv
 R5
-R7
+R31
 !i10b 1
 !s100 TD7U5JlbAXlllFoVbDISz2
 IPE;Zz4h@QAz2i54g;X:nF0
@@ -685,14 +687,14 @@ R2
 w1769413373
 8../puls_gen/puls_gen.sv
 F../puls_gen/puls_gen.sv
-!i122 40
+!i122 56
 L0 1 24
 R8
 R12
 r1
 !s85 0
 31
-R13
+R35
 !s107 ../puls_gen/puls_gen.sv|
 !s90 -reportprogress|300|-sv|../puls_gen/puls_gen.sv|
 !i113 0
@@ -717,7 +719,7 @@ R2
 Z62 w1769505170
 Z63 8../reg_file/reg_file.sv
 Z64 F../reg_file/reg_file.sv
-!i122 42
+!i122 58
 L0 3 47
 R12
 31
@@ -739,7 +741,7 @@ R2
 w1768754586
 8../sys_ctrl/reg_file_fsm/reg_file_fsm.sv
 F../sys_ctrl/reg_file_fsm/reg_file_fsm.sv
-!i122 48
+!i122 64
 L0 1 150
 R8
 R12
@@ -769,7 +771,7 @@ R2
 R62
 R63
 R64
-!i122 42
+!i122 58
 R19
 R12
 31
@@ -791,7 +793,7 @@ R2
 w1766051311
 8../asynch_fifo/rptr_empty.sv
 F../asynch_fifo/rptr_empty.sv
-!i122 47
+!i122 63
 L0 1 29
 R8
 R12
@@ -807,7 +809,7 @@ R3
 vRST_SYNC
 2../reset_synch/reset_synch.sv
 R5
-R7
+R31
 !i10b 1
 !s100 X24M3g9;ReZVLN15HYezM2
 I;FCUgGK4_19ghW_eAMHe@3
@@ -816,14 +818,14 @@ R2
 w1769508015
 8../reset_synch/reset_synch.sv
 F../reset_synch/reset_synch.sv
-!i122 41
+!i122 57
 L0 1 25
 R8
 R12
 r1
 !s85 0
 31
-R13
+R35
 !s107 ../reset_synch/reset_synch.sv|
 !s90 -reportprogress|300|-sv|../reset_synch/reset_synch.sv|
 !i113 0
@@ -847,7 +849,7 @@ R2
 Z67 w1769524494
 Z68 8../uart_tx_rx/RX.sv
 Z69 F../uart_tx_rx/RX.sv
-!i122 39
+!i122 55
 R19
 R12
 31
@@ -876,7 +878,7 @@ R2
 Z70 w1769505755
 Z71 8../uart_tx_rx/serializer.sv
 Z72 F../uart_tx_rx/serializer.sv
-!i122 39
+!i122 55
 L0 3 31
 R12
 31
@@ -903,7 +905,7 @@ R2
 R70
 R71
 R72
-!i122 39
+!i122 55
 R19
 R12
 31
@@ -925,7 +927,7 @@ R2
 w1768336311
 8../uart_tx_rx/stop_check.sv
 F../uart_tx_rx/stop_check.sv
-!i122 39
+!i122 55
 Z73 L0 1 18
 R8
 R12
@@ -950,7 +952,7 @@ R2
 w1768162987
 8../uart_tx_rx/start_check.sv
 F../uart_tx_rx/start_check.sv
-!i122 39
+!i122 55
 R73
 R8
 R12
@@ -975,7 +977,7 @@ R2
 w1766051129
 8../asynch_fifo/sync_r2w.sv
 F../asynch_fifo/sync_r2w.sv
-!i122 47
+!i122 63
 Z74 L0 1 13
 R8
 R12
@@ -1000,7 +1002,7 @@ R2
 w1766051171
 8../asynch_fifo/sync_w2r.sv
 F../asynch_fifo/sync_w2r.sv
-!i122 47
+!i122 63
 R74
 R8
 R12
@@ -1030,7 +1032,7 @@ R2
 Z76 w1769527493
 Z77 8../sys_ctrl/sys_controller.sv
 Z78 F../sys_ctrl/sys_controller.sv
-!i122 51
+!i122 67
 R19
 R12
 31
@@ -1058,7 +1060,7 @@ R2
 R76
 R77
 R78
-!i122 51
+!i122 67
 L0 3 120
 R12
 31
@@ -1081,7 +1083,7 @@ R2
 w1769505400
 8SYS_PACKAGE.sv
 FSYS_PACKAGE.sv
-!i122 38
+!i122 54
 R19
 VIW`m>ED5ZMQUFe[P[3M@01
 R12
@@ -1113,7 +1115,7 @@ R2
 R24
 R25
 R26
-!i122 52
+!i122 68
 L0 3 271
 R12
 31
@@ -1129,15 +1131,15 @@ vSYS_TOP_TBBBB
 R5
 R22
 !i10b 1
-!s100 oc=L;Fk`K]N^5H4HLoT^Z2
-I@o@kJieT7c]I>G[DO_=Kj2
+!s100 d6e_IILGPQ;8_aJhEFdSE1
+I?f`cW`TQB4YPFT0WAL3A^0
 S1
 R2
-w1769548878
+w1769549107
 8SYS_TOP_TB.sv
 FSYS_TOP_TB.sv
-!i122 53
-L0 3 378
+!i122 69
+L0 3 1050
 R8
 R12
 r1
@@ -1162,7 +1164,7 @@ R2
 w1768683830
 8../sys_ctrl/top_fsm/top_fsm.sv
 F../sys_ctrl/top_fsm/top_fsm.sv
-!i122 50
+!i122 66
 L0 1 125
 R8
 R12
@@ -1192,7 +1194,7 @@ R2
 R24
 R25
 R26
-!i122 52
+!i122 68
 R19
 R12
 31
@@ -1220,7 +1222,7 @@ R2
 w1768499727
 Z82 8../uart_tx_rx/Tx_Rx_Wrapper.sv
 Z83 F../uart_tx_rx/Tx_Rx_Wrapper.sv
-!i122 39
+!i122 55
 L0 4 52
 R12
 31
@@ -1249,7 +1251,7 @@ Z84 w1768500369
 R82
 R83
 Z85 F../uart_tx_rx/UART_PACKAGE.sv
-!i122 39
+!i122 55
 L0 2 0
 R12
 31
@@ -1272,7 +1274,7 @@ R2
 w1768500343
 8../uart_tx_rx/Tx_Rx_Wrapper_tb.sv
 F../uart_tx_rx/Tx_Rx_Wrapper_tb.sv
-!i122 39
+!i122 55
 L0 3 165
 R8
 R12
@@ -1303,7 +1305,7 @@ R2
 R55
 R56
 R57
-!i122 39
+!i122 55
 L0 6 0
 R12
 31
@@ -1326,7 +1328,7 @@ R2
 R84
 8../uart_tx_rx/UART_PACKAGE.sv
 R85
-!i122 39
+!i122 55
 R19
 V:U[Wn`Ozg]P2`1SC8_ILA0
 R12
@@ -1358,7 +1360,7 @@ R2
 R67
 R68
 R69
-!i122 39
+!i122 55
 L0 3 126
 R12
 31
@@ -1387,7 +1389,7 @@ R2
 R55
 R56
 R57
-!i122 39
+!i122 55
 L0 8 133
 R12
 31
@@ -1410,7 +1412,7 @@ R2
 w1768599029
 8../asynch_fifo/wptr_full.sv
 F../asynch_fifo/wptr_full.sv
-!i122 47
+!i122 63
 L0 1 31
 R8
 R12
