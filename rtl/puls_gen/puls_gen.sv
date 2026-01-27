@@ -1,6 +1,6 @@
 module PULSE_GEN (
     input  wire i_CLK,       // System Clock
-    input  wire i_RST_n,       // Synchronous Reset (Active High)
+    input  wire i_RSTn,       // Synchronous Reset (Active High)
     input  wire i_LVL_SIG,   // Input Level Signal
     output wire o_PULSE_SIG  // Output Pulse Signal
 );
@@ -9,8 +9,8 @@ module PULSE_GEN (
     reg lvl_sig_delay;
 
     // Sequential logic to sample the input signal
-    always @( posedge i_CLK, negedge i_RST_n) begin
-        if (!i_RST_n) begin
+    always @( posedge i_CLK, negedge i_RSTn) begin
+        if (!i_RSTn) begin
             lvl_sig_delay <= 1'b0;
         end else begin
             lvl_sig_delay <= i_LVL_SIG;

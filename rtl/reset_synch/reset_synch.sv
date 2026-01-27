@@ -1,14 +1,14 @@
 module RST_SYNC (
     input  logic i_CLK,       // System Clock
-    input  logic i_RST_n,     // Asynchronous Reset Input (Active Low)
-    output logic o_SYNC_RST_n // Synchronized Reset Output (Active Low)
+    input  logic i_RSTn,     // Asynchronous Reset Input (Active Low)
+    output logic o_SYNC_RSTn // Synchronized Reset Output (Active Low)
 );
 
     // Two-stage shift register for synchronization
     logic r_sync_reg_1, r_sync_reg_2;
 
-    always_ff @(posedge i_CLK or negedge i_RST_n) begin
-        if (!i_RST_n) begin
+    always_ff @(posedge i_CLK or negedge i_RSTn) begin
+        if (!i_RSTn) begin
             // On reset, immediately clear synchronizers to '0'
             r_sync_reg_1 <= 1'b0;
             r_sync_reg_2 <= 1'b0;
@@ -20,6 +20,6 @@ module RST_SYNC (
     end
 
     // The output is the second stage of the synchronizer
-    assign o_SYNC_RST_n = r_sync_reg_2;
+    assign o_SYNC_RSTn = r_sync_reg_2;
 
 endmodule

@@ -1,4 +1,4 @@
-import UART_PACKAGE::*;
+import SYS_PACKAGE::*;
 
 module edge_bit_counter (
     input  logic i_clk,

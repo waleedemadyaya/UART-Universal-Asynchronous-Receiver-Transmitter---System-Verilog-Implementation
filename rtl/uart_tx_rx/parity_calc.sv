@@ -1,4 +1,4 @@
-import UART_PACKAGE::*;
+import SYS_PACKAGE::*;
 
 module parity_calc (
     P_DATA,

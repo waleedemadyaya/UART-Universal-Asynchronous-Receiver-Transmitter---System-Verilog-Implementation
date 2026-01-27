@@ -1,56 +1,46 @@
-import UART_PACKAGE::*;
-import ALU_PACKAGE::*;
+import SYS_PACKAGE::*;
 
-module ALU (
-    input i_CLK,
-    input i_RSTn,
-    input [ALU_FUN_WIDTH-1:0] i_ALU_FUN,
-    input [DATA_WIDTH-1:0] i_A,
-    input [DATA_WIDTH-1:0] i_B,
-    input i_Enable,
-
-    output logic [2*DATA_WIDTH-1:0] o_ALU_OUT,
-    output logic o_CF,   // carry flage
-    output logic o_OF,   // overflow flage
-    output logic o_EF,   //equal flage
-    output logic o_ZF,   //zero flage
-    output logic o_OUT_VALID
-
+module ALU #(
+    parameter A_WIDTH = 8,
+    parameter B_WIDTH = 8,
+    parameter OUT_WIDTH = 16 // Set to 16 for ALU result [cite: 364]
+)(
+    input  logic                 i_CLK,       // From i_CLK_GATE [cite: 330]
+    input  logic                 i_RSTn,       // From i_RST_SYNC [cite: 331]
+    input  logic [A_WIDTH-1:0]   i_A,         // From RegFile REG0 [cite: 304, 323]
+    input  logic [B_WIDTH-1:0]   i_B,         // From RegFile REG1 [cite: 306, 324]
+    input  logic [ALU_FUN_WIDTH-1:0]           i_ALU_FUN,   // From SYS_CTRL [cite: 326, 349]
+    input  logic                 i_Enable,    // From SYS_CTRL [cite: 328, 347]
+    output logic [OUT_WIDTH-1:0] o_ALU_OUT,   // To SYS_CTRL [cite: 325, 346]
+    output logic                 o_OUT_VALID  // To SYS_CTRL [cite: 329, 348]
 );
-    opcode_t op;
-    assign op = opcode_t'(i_ALU_FUN);  // Cast to enum type
 
-    always_ff @( posedge i_CLK, negedge i_RSTn ) begin : pb_ALU
+    always_ff @(posedge i_CLK or negedge i_RSTn) begin
         if (!i_RSTn) begin
-            o_ALU_OUT <= 'b0;
-            o_OUT_VALID <= 'b0;
-        end else begin
-            o_OUT_VALID <= 'b1;
-            case (op)
-                OP_ADD:   o_ALU_OUT = alu_add(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_SUB:   o_ALU_OUT = alu_sub(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_MUL:   o_ALU_OUT = alu_mul(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_DIV:   o_ALU_OUT = alu_div(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_AND:   o_ALU_OUT = alu_and(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_OR:    o_ALU_OUT = alu_or(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_NAND:  o_ALU_OUT = alu_nand(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_NOR:   o_ALU_OUT = alu_nor(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_XOR:   o_ALU_OUT = alu_xor(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_XNOR:  o_ALU_OUT = alu_xnor(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_CMP_EQ: o_ALU_OUT = alu_cmp_eq(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_CMP_GT: o_ALU_OUT = alu_cmp_gt(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_SHR:   o_ALU_OUT = alu_shr(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                OP_SHL:   o_ALU_OUT = alu_shl(i_A, i_B, o_CF, o_OF, o_ZF, o_EF);
-                default: begin
-                    o_ALU_OUT = '0;
-                    o_CF = 1'b0;
-                    o_OF = 1'b0;
-                    o_ZF = 1'b0;
-                    o_EF = 1'b0;
-                    o_OUT_VALID <= 'b0;
-                end
+            o_ALU_OUT   <= '0;
+            o_OUT_VALID <= 1'b0;
+        end else if (i_Enable) begin
+            o_OUT_VALID <= 1'b1;
+            case (i_ALU_FUN)
+                ADD:   o_ALU_OUT <= add_funct(i_A, i_B);
+                SUB:   o_ALU_OUT <= sub_funct(i_A, i_B);
+                MUL:   o_ALU_OUT <= mul_funct(i_A, i_B);
+                DIV:   o_ALU_OUT <= div_funct(i_A, i_B);
+                AND:   o_ALU_OUT <= and_funct(i_A, i_B);
+                OR:    o_ALU_OUT <= or_funct(i_A, i_B);
+                NAND:  o_ALU_OUT <= nand_funct(i_A, i_B);
+                NOR:   o_ALU_OUT <= nor_funct(i_A, i_B);
+                XOR:   o_ALU_OUT <= xor_funct(i_A, i_B);
+                XNOR:  o_ALU_OUT <= xnor_funct(i_A, i_B);
+                EQUAL: o_ALU_OUT <= equal_funct(i_A, i_B);
+                GT:    o_ALU_OUT <= gt_funct(i_A, i_B);
+                LT:    o_ALU_OUT <= lt_funct(i_A, i_B);
+                LSR:   o_ALU_OUT <= lsr_funct(i_A, i_B);
+                LSL:   o_ALU_OUT <= lsl_funct(i_A, i_B);
+                default: o_ALU_OUT <= '0;
             endcase
+        end else begin
+            o_OUT_VALID <= 1'b0;
         end
     end
-
 endmodule

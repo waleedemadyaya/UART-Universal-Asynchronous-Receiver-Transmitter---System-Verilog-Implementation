@@ -10,6 +10,7 @@ module clk_div #(
 
     logic [DIVISION_RATION_WIDTH - 1 : 0] r_div_counter;
     logic                                 r_latched_en;
+    logic                                 o_div_clk_internal;
     
     logic [DIVISION_RATION_WIDTH - 1 : 0] w_half_ratio;
     assign w_half_ratio = i_div_ratio >> 1;
@@ -21,28 +22,30 @@ module clk_div #(
         end
     end
 
+    assign o_div_clk = (i_div_ratio <= 1) ? i_ref_clk : o_div_clk_internal;
+
     always_ff @(posedge i_ref_clk or negedge i_rst_n) begin : proc_counter
         if (!i_rst_n) begin
             r_div_counter <= '0;
-            o_div_clk     <= 1'b0;
+            o_div_clk_internal     <= 1'b0;
         end else if (r_latched_en) begin
             
             if (i_div_ratio <= 1) begin
-                o_div_clk <= !o_div_clk; 
+                o_div_clk_internal <= !o_div_clk_internal; 
             end else if (r_div_counter >= i_div_ratio - 1) begin
                 r_div_counter <= '0;
-                o_div_clk     <= 1'b0; 
+                o_div_clk_internal     <= 1'b0; 
             end else begin
                 r_div_counter <= r_div_counter + 1'b1;
                 
                 // Toggle point for 50% duty cycle
                 if (r_div_counter == w_half_ratio - 1) begin
-                    o_div_clk <= 1'b1;
+                    o_div_clk_internal <= 1'b1;
                 end
             end
         end else begin
             // Reset state when disabled
-            o_div_clk     <= 1'b0;
+            o_div_clk_internal     <= 1'b0;
             r_div_counter <= '0;
         end
     end

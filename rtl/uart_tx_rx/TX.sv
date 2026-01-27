@@ -3,14 +3,14 @@
 // ============================================
 // Package Import (Assuming UART_PACKAGE exists)
 // ============================================
-import UART_PACKAGE::*;
+import SYS_PACKAGE::*;
 
 module UART_TX (
     // ============================================
     // Clock & Reset (Primary Interface)
     // ============================================
-    input  logic       i_clk,           // 200 MHz clock
-    input  logic       i_rst_n,         // Active-low asynchronous reset
+    input  logic       i_CLK,           // 200 MHz clock
+    input  logic       i_RSTn,         // Active-low asynchronous reset
     
     // ============================================
     // Configuration Signals
@@ -21,7 +21,7 @@ module UART_TX (
     // ============================================
     // Data Interface
     // ============================================
-    input  logic [7:0] i_P_DATA,        // Parallel input data (8-bit)
+    input  logic [DATA_WIDTH-1:0] i_P_DATA,        // Parallel input data (8-bit)
     input  logic       i_DATA_VALID,    // Data valid pulse (1 cycle)
     
     // ============================================
@@ -43,6 +43,7 @@ logic       ser_data;        // Serialized data output
 logic       ser_done;        // Serializer done flag
 logic       par_bit;         // Calculated parity bit
 logic       mux_out;         // Mux output before TX_OUT
+logic [DATA_WIDTH-1:0] w_latched_data;
 
 
 // ============================================
@@ -62,8 +63,8 @@ assign mux_in_parity = par_bit; // Parity from calculator
 // Instantiate FSM Controller
 // ============================================
 FSM_controller u_FSM (
-    .i_clk(i_clk),
-    .i_resetn(i_rst_n),
+    .i_clk(i_CLK),
+    .i_resetn(i_RSTn),
     .i_Data_Valid(i_DATA_VALID),
     .i_PAR_EN(i_PAR_EN),
     .i_ser_done(ser_done),
@@ -77,9 +78,9 @@ FSM_controller u_FSM (
 // Instantiate Serializer (8-bit)
 // ============================================
 serializer u_serializer (
-    .i_clk(i_clk),
-    .i_resetn(i_rst_n),
-    .i_P_DATA(i_P_DATA),
+    .i_clk(i_CLK),
+    .i_resetn(i_RSTn),
+    .i_P_DATA(w_latched_data),
     .i_ser_en(ser_en),
     .i_latche_en(latch_en),
     .o_ser_data(ser_data),
@@ -90,7 +91,7 @@ serializer u_serializer (
 // Instantiate Parity Calculator
 // ============================================
 parity_calc u_parity_calc (
-    .P_DATA(i_P_DATA),
+    .P_DATA(w_latched_data),
     .Data_Valid(latch_en),      // Calculate parity when data is latched
     .PAR_TYP(i_PAR_TYP),
     .par_bit(par_bit)
@@ -109,10 +110,21 @@ mux_4_1 u_output_mux (
 );
 
 // ============================================
+// Instantiate Latching the data
+// ============================================
+latche_data u_latche_data (
+    .i_CLK(i_CLK),
+    .i_RSTn(i_RSTn),
+    .i_P_DATA(i_P_DATA),
+    .i_DATA_VALID(i_DATA_VALID),
+    .o_latched_DATA(w_latched_data)
+);
+
+// ============================================
 // Output Register (Optional for timing)
 // ============================================
-//always_ff @(posedge i_clk or negedge i_rst_n) begin : output_register
-//    if (!i_rst_n) begin
+//always_ff @(posedge i_clk or negedge i_RSTn) begin : output_register
+//    if (!i_RSTn) begin
 //        o_TX_OUT <= 1'b1;    // Idle state = high
 //    end else begin
 //        o_TX_OUT <= mux_out;
@@ -125,4 +137,28 @@ mux_4_1 u_output_mux (
  assign o_TX_OUT = mux_out;  // Use this for unregistered output
 
 
+endmodule
+
+module latche_data (
+    input  logic       i_CLK,           // 200 MHz clock
+    input  logic       i_RSTn,         // Active-low asynchronous reset
+    // ============================================
+    // Data Interface
+    // ============================================
+    input  logic [DATA_WIDTH-1:0]   i_P_DATA,        // Parallel input data (8-bit)
+    input  logic                    i_DATA_VALID,    // Data valid pulse (1 cycle)
+    
+    //Outputs 
+    output logic [DATA_WIDTH-1:0]   o_latched_DATA     
+);
+
+    always_ff @( posedge i_CLK, negedge i_RSTn ) begin : blockName
+        if(!i_RSTn)begin
+            o_latched_DATA <= i_P_DATA;
+        end else if (i_DATA_VALID) begin
+            o_latched_DATA <= i_P_DATA;
+        end else begin
+            o_latched_DATA <= o_latched_DATA;
+        end
+    end
 endmodule

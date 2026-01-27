@@ -1,12 +1,12 @@
-import UART_PACKAGE::*;
+import SYS_PACKAGE::*;
 
 module reg_file (
     input [DATA_WIDTH-1:0] i_WrData,
     input [ADDRESS_WIDTH-1:0] i_Address,
     input i_WrEn,
     input i_RdEn,
-    input CLK,
-    input RSTn,
+    input i_CLK,
+    input i_RSTn,
 
     output logic [DATA_WIDTH-1:0] o_RdData,
     output logic [DATA_WIDTH-1:0] o_REG0,
@@ -18,8 +18,8 @@ module reg_file (
 
     logic [DATA_WIDTH-1:0] r_reg_file [(2**ADDRESS_WIDTH)-1:0];
 
-    always_ff @( posedge CLK, negedge RSTn ) begin : pb_reg_file
-        if (!RSTn)
+    always_ff @( posedge i_CLK, negedge i_RSTn ) begin : pb_reg_file
+        if (!i_RSTn)
         begin
             // Initialize array
             for (int i = 0; i < ADDRESS_WIDTH; i++) begin

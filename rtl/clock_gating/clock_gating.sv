@@ -1,17 +1,17 @@
 module clock_gating (
-    input logic i_clk,
-    input logic i_en,
-    output logic o_clk
+    input logic i_CLK,
+    input logic i_CLK_EN,
+    output logic o_GATED_CLK
 );
     logic r_sync_en;
     
     always_latch begin : blockName
-        if(!i_clk)
+        if(!i_CLK)
         begin
-            r_sync_en <= i_en;
+            r_sync_en <= i_CLK_EN;
         end
     end
 
-    assign o_clk = i_clk & r_sync_en;
+    assign o_GATED_CLK = i_CLK & r_sync_en;
 
 endmodule

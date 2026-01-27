@@ -1,4 +1,4 @@
-import UART_PACKAGE::*;
+import SYS_PACKAGE::*;
 
 module deserializer (
     input  logic                   i_clk,

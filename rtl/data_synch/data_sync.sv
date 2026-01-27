@@ -4,7 +4,7 @@ module Data_Sync #(
     input  logic [BUS_WIDTH-1:0] i_unsync_bus,   // Unsynchronized data from source domain
     input  logic                 i_bus_enable,   // Enable signal from source domain
     input  logic                 i_dest_clk,     // Destination clock domain
-    input  logic                 i_dest_rst_n,   // Destination active-low reset
+    input  logic                 i_dest_rstn,   // Destination active-low reset
     output logic [BUS_WIDTH-1:0] o_sync_bus,     // Synchronized data bus
     output logic                 o_enable_pulse  // Single-cycle pulse in dest domain
 );
@@ -16,8 +16,8 @@ module Data_Sync #(
     // 1. Synchronize the Enable Signal
     // We use a 3-stage synchronizer to minimize metastability risk.
     // -------------------------------------------------------------------------
-    always_ff @(posedge i_dest_clk or negedge i_dest_rst_n) begin
-        if (!i_dest_rst_n) begin
+    always_ff @(posedge i_dest_clk or negedge i_dest_rstn) begin
+        if (!i_dest_rstn) begin
             r_sync_chain <= 3'b0;
         end else begin
             r_sync_chain <= {r_sync_chain[1:0], i_bus_enable};
@@ -35,8 +35,8 @@ module Data_Sync #(
     // When the pulse is high, the data bus is guaranteed to be stable.
     // This prevents individual bits of the bus from "skewing."
     // -------------------------------------------------------------------------
-    always_ff @(posedge i_dest_clk or negedge i_dest_rst_n) begin
-        if (!i_dest_rst_n) begin
+    always_ff @(posedge i_dest_clk or negedge i_dest_rstn) begin
+        if (!i_dest_rstn) begin
             o_sync_bus <= '0;
         end else begin
             o_sync_bus <= i_unsync_bus;

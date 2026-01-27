@@ -1,0 +1,9 @@
+BEGIN 1:UART_TX:fast:work
+    i_CLK :  1:SYS_TOP_TBBBB:fast:work
+    o_TX_OUT :  1:SYS_TOP_TBBBB:fast:work
+END 
+BEGIN 1:reg_file:fast:work
+    r_reg_file :  1:SYS_TOP_TBBBB:fast:work
+    i_WrEn :  1:SYS_TOP_TBBBB:fast:work
+    o_REG2 :  1:SYS_TOP_TBBBB:fast:work
+END 

@@ -1,33 +1,34 @@
-module SYS_CTRL #(
-    parameter ADDR_WIDTH     = 4,
-    parameter DATA_WIDTH     = 8,
-    parameter ALU_OUT_WIDTH  = 16,
-    parameter ALU_FUN_WIDTH  = 4
-) (
-    input  logic                     i_clk, 
+import SYS_PACKAGE::*;
+
+module SYS_CTRL (
+    input  logic                     i_CLK, 
     input  logic                     i_RSTn,
     
     // External Interface (from Data Synchronizer / UART)
-    input  logic                     data_synchronizer_valid,
-    input  logic [DATA_WIDTH-1 : 0]  synch_data,
+    input  logic                     i_RX_D_VLD,
+    input  logic [DATA_WIDTH-1 : 0]  i_RX_P_DATA,
 
     // Interface to Register File (Physical Memory)
     output logic                     o_WrEn, 
     output logic                     o_RdEn, 
-    output logic [ADDR_WIDTH-1 : 0]  o_Addr, 
-    output logic [DATA_WIDTH-1 : 0]  o_Wr_D,
-    input  logic [DATA_WIDTH-1 : 0]  i_Rd_D,
+    output logic [ADDR_WIDTH-1 : 0]  o_Address, 
+    output logic [DATA_WIDTH-1 : 0]  o_WrData,
+    input  logic [DATA_WIDTH-1 : 0]  i_RdData,
+    input logic                      i_RdData_Valid,
 
     // Interface to ALU (Execution Unit)
-    output logic [ALU_FUN_WIDTH-1:0] o_ALU_Func,
-    output logic                     o_ALU_EN,
-    input  logic                     i_ALU_OUT_Valid,
-    input  logic [ALU_OUT_WIDTH-1:0] i_ALU_OUT_Result,
+    output logic [ALU_FUN_WIDTH-1:0] o_ALU_FUN,
+    output logic                     o_EN,
+    output logic                     o_CLK_EN,
+    input  logic                     i_OUT_Valid,
+    input  logic [ALU_OUT_WIDTH-1:0] i_ALU_OUT,
 
     // Interface to FIFO/UART TX
     input  logic                     i_FIFO_FULL,
-    output logic [DATA_WIDTH-1 : 0]  o_TX_DATA,
-    output logic                     o_TX_WR_INC
+    output logic [DATA_WIDTH-1 : 0]  o_TX_P_DATA,
+    output logic                     o_TX_D_VLD
+
+    //output logic                     o_clk_div_en
 );
 
     // --- Internal Wire Declarations ---
@@ -56,12 +57,12 @@ module SYS_CTRL #(
         .DATA_WIDTH(DATA_WIDTH),
         .ALU_OUT_WIDTH(ALU_OUT_WIDTH)
     ) U_top_fsm (
-        .i_clk(i_clk), .i_RSTn(i_RSTn),
-        .data_synchronizer_valid(data_synchronizer_valid),
-        .synch_data(synch_data),
+        .i_clk(i_CLK), .i_RSTn(i_RSTn),
+        .data_synchronizer_valid(i_RX_D_VLD),
+        .synch_data(i_RX_P_DATA),
         .i_FIFO_FULL(i_FIFO_FULL),
-        .o_WR_DATA(o_TX_DATA),
-        .o_WR_INC(o_TX_WR_INC),
+        .o_WR_DATA(o_TX_P_DATA),
+        .o_WR_INC(o_TX_D_VLD),
         .o_alu_start(o_alu_start),
         .o_alu_operands_en(o_alu_operands_en),
         .i_alu_done(i_alu_done),
@@ -77,18 +78,19 @@ module SYS_CTRL #(
         .ALU_FUN_WIDTH(ALU_FUN_WIDTH),
         .DATA_WIDTH(DATA_WIDTH)
     ) U_alu_fsm (
-        .i_clk(i_clk), .i_RSTn(i_RSTn),
+        .i_clk(i_CLK), .i_RSTn(i_RSTn),
         .i_alu_start(o_alu_start),
-        .data_synchronizer_valid(data_synchronizer_valid),
-        .synch_data(synch_data),
+        .data_synchronizer_valid(i_RX_D_VLD),
+        .synch_data(i_RX_P_DATA),
         .i_operands_en(o_alu_operands_en),
         .o_read_operands(w_alu_read_operands),
         .i_read_operands_done(w_alu_read_operands_done),
-        .o_Func(o_ALU_Func),
-        .o_EN(o_ALU_EN),
+        .o_Func(o_ALU_FUN),
+        .o_EN(o_EN),
+        .o_CLK_EN(o_CLK_EN),
         .o_ALU_OUT(w_ALU_Result_Latching),
-        .i_OUT_Valid(i_ALU_OUT_Valid),
-        .i_ALU_OUT(i_ALU_OUT_Result),
+        .i_OUT_Valid(i_OUT_Valid),
+        .i_ALU_OUT(i_ALU_OUT),
         .o_alu_done(i_alu_done)
     );
 
@@ -98,18 +100,18 @@ module SYS_CTRL #(
         .DATA_WIDTH(DATA_WIDTH),
         .WRDATA_WIDTH(DATA_WIDTH)
     ) U_reg_file_fsm (
-        .i_clk(i_clk), .i_RSTn(i_RSTn),
+        .i_clk(i_CLK), .i_RSTn(i_RSTn),
         .i_reg_start(o_reg_start || w_alu_read_operands), // Start on manual OR ALU request
-        .data_synchronizer_valid(data_synchronizer_valid),
-        .synch_data(synch_data),
+        .data_synchronizer_valid(i_RX_D_VLD),
+        .synch_data(i_RX_P_DATA),
         .i_rw_en(o_reg_rw_en), 
         .i_alu_fetch_en(w_alu_read_operands), // Tell RegFile if this is an auto-fetch
         .o_WrEn(o_WrEn),
         .o_RdEn(o_RdEn),
-        .o_Addr(o_Addr),
-        .o_Wr_D(o_Wr_D),
+        .o_Addr(o_Address),
+        .o_Wr_D(o_WrData),
         .o_reg_done(i_reg_done_internal),
-        .i_Rd_D(i_Rd_D),
+        .i_Rd_D(i_RdData),
         .o_Rd_D(w_Reg_Read_Data)
     );
 

@@ -1,4 +1,4 @@
-import UART_PACKAGE::*;
+import SYS_PACKAGE::*;
 
 module serializer (
     input i_clk,

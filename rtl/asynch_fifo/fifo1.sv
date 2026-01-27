@@ -28,14 +28,15 @@ module fifo1 #(
     output o_FULL,
     output o_EMPTY,
     input [DSIZE-1:0] i_WR_DATA,
-    input i_W_INC, i_W_CLK, W_RST_n,
+    input i_W_INC, i_W_CLK, i_W_RSTn,
     input i_R_INC, i_R_CLK, i_R_RSTn);
+    
     wire [ASIZE-1:0] waddr, raddr;
     wire [ASIZE:0] wptr, rptr, wq2_rptr, rq2_wptr;
     
      sync_r2w sync_r2w (
      .wq2_rptr(wq2_rptr), .rptr(rptr),
-     .wclk(i_W_CLK), .wrst_n(W_RST_n));
+     .wclk(i_W_CLK), .wrst_n(i_W_RSTn));
      
      sync_w2r sync_w2r
     (.rq2_wptr(rq2_wptr), .wptr(wptr),
@@ -61,5 +62,5 @@ module fifo1 #(
      (.wfull(o_FULL), .waddr(waddr),
      .wptr(wptr), .wq2_rptr(wq2_rptr),
      .winc(i_W_INC), .wclk(i_W_CLK),
-     .wrst_n(W_RST_n));
+     .wrst_n(i_W_RSTn));
 endmodule

@@ -1,0 +1,1372 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+do run.do
+# QuestaSim-64 vmap 2024.1 Lib Mapping Utility 2024.02 Feb  1 2024
+# vmap work work 
+# Copying C:/questasim64_2024.1/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:14:30 on Jan 27,2026
+# vlog -reportprogress 300 -sv SYS_PACKAGE.sv 
+# -- Compiling package SYS_PACKAGE
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:14:30 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:14:30 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../uart_tx_rx/FSM.sv ../uart_tx_rx/FSM_controller.sv ../uart_tx_rx/RX.sv ../uart_tx_rx/TX.sv ../uart_tx_rx/Tx_Rx_Wrapper.sv ../uart_tx_rx/Tx_Rx_Wrapper_tb.sv ../uart_tx_rx/UART_PACKAGE.sv ../uart_tx_rx/data_sampling.sv ../uart_tx_rx/deserializer.sv ../uart_tx_rx/edge_bit_counter.sv ../uart_tx_rx/mux4_1.sv ../uart_tx_rx/parity_calc.sv ../uart_tx_rx/parity_check.sv ../uart_tx_rx/serializer.sv ../uart_tx_rx/start_check.sv ../uart_tx_rx/stop_check.sv 
+# -- Compiling package FSM_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module fsm_controller
+# -- Compiling package FSM_controller_sv_unit
+# -- Compiling module FSM_controller
+# -- Compiling package RX_sv_unit
+# -- Compiling module UART_RX
+# -- Compiling package TX_sv_unit
+# -- Compiling module UART_TX
+# -- Compiling module latche_data
+# -- Compiling package UART_PACKAGE
+# -- Compiling package Tx_Rx_Wrapper_sv_unit
+# -- Importing package UART_PACKAGE
+# -- Compiling module Tx_Rx_Wrapper
+# -- Compiling module Tx_Rx_Wrapper_tb
+# -- Compiling package UART_PACKAGE
+# ** Warning: ../uart_tx_rx/UART_PACKAGE.sv(1): (vlog-2275) Existing package 'UART_PACKAGE' at line 1 will be overwritten.
+# -- Compiling package data_sampling_sv_unit
+# -- Compiling module data_sampling
+# -- Compiling package deserializer_sv_unit
+# -- Compiling module deserializer
+# -- Compiling package edge_bit_counter_sv_unit
+# -- Compiling module edge_bit_counter
+# -- Compiling module mux_4_1
+# -- Compiling package parity_calc_sv_unit
+# -- Compiling module parity_calc
+# -- Compiling module parity_check
+# -- Compiling package serializer_sv_unit
+# -- Compiling module serializer
+# -- Compiling module strt_check
+# -- Compiling module stp_check
+# 
+# Top level modules:
+# 	Tx_Rx_Wrapper_tb
+# End time: 23:14:30 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:14:30 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../puls_gen/puls_gen.sv 
+# -- Compiling module PULSE_GEN
+# 
+# Top level modules:
+# 	PULSE_GEN
+# End time: 23:14:30 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:14:30 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../reset_synch/reset_synch.sv 
+# -- Compiling module RST_SYNC
+# 
+# Top level modules:
+# 	RST_SYNC
+# End time: 23:14:30 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:14:30 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../reg_file/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 23:14:31 on Jan 27,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:14:31 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../alu/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:14:31 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:14:31 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../data_sync/data_sync.sv 
+# ** Error: (vlog-7) Failed to open design unit file "../data_sync/data_sync.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 23:14:31 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/questasim64_2024.1/win64/vlog failed.
+# Error in macro ./run.do line 18
+# C:/questasim64_2024.1/win64/vlog failed.
+#     while executing
+# "vlog -sv ../data_sync/data_sync.sv"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vmap 2024.1 Lib Mapping Utility 2024.02 Feb  1 2024
+# vmap work work 
+# Modifying modelsim.ini
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:10 on Jan 27,2026
+# vlog -reportprogress 300 -sv SYS_PACKAGE.sv 
+# -- Compiling package SYS_PACKAGE
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:15:10 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:11 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../uart_tx_rx/FSM.sv ../uart_tx_rx/FSM_controller.sv ../uart_tx_rx/RX.sv ../uart_tx_rx/TX.sv ../uart_tx_rx/Tx_Rx_Wrapper.sv ../uart_tx_rx/Tx_Rx_Wrapper_tb.sv ../uart_tx_rx/UART_PACKAGE.sv ../uart_tx_rx/data_sampling.sv ../uart_tx_rx/deserializer.sv ../uart_tx_rx/edge_bit_counter.sv ../uart_tx_rx/mux4_1.sv ../uart_tx_rx/parity_calc.sv ../uart_tx_rx/parity_check.sv ../uart_tx_rx/serializer.sv ../uart_tx_rx/start_check.sv ../uart_tx_rx/stop_check.sv 
+# -- Compiling package FSM_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module fsm_controller
+# -- Compiling package FSM_controller_sv_unit
+# -- Compiling module FSM_controller
+# -- Compiling package RX_sv_unit
+# -- Compiling module UART_RX
+# -- Compiling package TX_sv_unit
+# -- Compiling module UART_TX
+# -- Compiling module latche_data
+# -- Compiling package UART_PACKAGE
+# -- Compiling package Tx_Rx_Wrapper_sv_unit
+# -- Importing package UART_PACKAGE
+# -- Compiling module Tx_Rx_Wrapper
+# -- Compiling module Tx_Rx_Wrapper_tb
+# -- Compiling package UART_PACKAGE
+# ** Warning: ../uart_tx_rx/UART_PACKAGE.sv(1): (vlog-2275) Existing package 'UART_PACKAGE' at line 1 will be overwritten.
+# -- Compiling package data_sampling_sv_unit
+# -- Compiling module data_sampling
+# -- Compiling package deserializer_sv_unit
+# -- Compiling module deserializer
+# -- Compiling package edge_bit_counter_sv_unit
+# -- Compiling module edge_bit_counter
+# -- Compiling module mux_4_1
+# -- Compiling package parity_calc_sv_unit
+# -- Compiling module parity_calc
+# -- Compiling module parity_check
+# -- Compiling package serializer_sv_unit
+# -- Compiling module serializer
+# -- Compiling module strt_check
+# -- Compiling module stp_check
+# 
+# Top level modules:
+# 	Tx_Rx_Wrapper_tb
+# End time: 23:15:11 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:11 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../puls_gen/puls_gen.sv 
+# -- Compiling module PULSE_GEN
+# 
+# Top level modules:
+# 	PULSE_GEN
+# End time: 23:15:11 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:11 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../reset_synch/reset_synch.sv 
+# -- Compiling module RST_SYNC
+# 
+# Top level modules:
+# 	RST_SYNC
+# End time: 23:15:11 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:11 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../reg_file/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 23:15:11 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:11 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../alu/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:15:11 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:11 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../data_synch/data_sync.sv 
+# -- Compiling module Data_Sync
+# 
+# Top level modules:
+# 	Data_Sync
+# End time: 23:15:11 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:11 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../clock_gating/clock_gating.sv 
+# -- Compiling module clock_gating
+# 
+# Top level modules:
+# 	clock_gating
+# End time: 23:15:11 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:11 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../clock_divider/clk_div.sv 
+# -- Compiling module clk_div
+# 
+# Top level modules:
+# 	clk_div
+# End time: 23:15:12 on Jan 27,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:12 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../asynch_fifo/fifo1.sv ../asynch_fifo/fifomem.sv ../asynch_fifo/rptr_empty.sv ../asynch_fifo/sync_r2w.sv ../asynch_fifo/sync_w2r.sv ../asynch_fifo/wptr_full.sv 
+# -- Compiling module fifo1
+# -- Compiling module fifomem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# 
+# Top level modules:
+# 	fifo1
+# End time: 23:15:12 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:12 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/reg_file_fsm/reg_file_fsm.sv 
+# -- Compiling module reg_file_fsm
+# 
+# Top level modules:
+# 	reg_file_fsm
+# End time: 23:15:12 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:12 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/alu_fsm/alu_fsm.sv 
+# -- Compiling module alu_fsm
+# 
+# Top level modules:
+# 	alu_fsm
+# End time: 23:15:12 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:12 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/top_fsm/top_fsm.sv 
+# -- Compiling module top_fsm
+# 
+# Top level modules:
+# 	top_fsm
+# End time: 23:15:12 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:12 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/sys_controller.sv 
+# -- Compiling package sys_controller_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module SYS_CTRL
+# 
+# Top level modules:
+# 	SYS_CTRL
+# End time: 23:15:12 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:12 on Jan 27,2026
+# vlog -reportprogress 300 -sv top_sys.sv 
+# -- Compiling package top_sys_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module SYS_TOP
+# -- Compiling module clk_multiplier
+# 
+# Top level modules:
+# 	SYS_TOP
+# 	clk_multiplier
+# End time: 23:15:12 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:15:12 on Jan 27,2026
+# vlog -reportprogress 300 -sv SYS_TOP_TB.sv 
+# -- Compiling module SYS_TOP_TBBBB
+# 
+# Top level modules:
+# 	SYS_TOP_TBBBB
+# End time: 23:15:13 on Jan 27,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.SYS_TOP_TBBBB 
+# Start time: 23:15:13 on Jan 27,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vopt-143) Recognized 1 FSM in module "reg_file_fsm(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "top_fsm(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "alu_fsm(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "fsm_controller(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM_controller(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.SYS_TOP_TBBBB(fast)
+# Loading work.SYS_PACKAGE(fast)
+# Loading work.top_sys_sv_unit(fast)
+# Loading work.SYS_TOP(fast)
+# Loading work.RST_SYNC(fast)
+# Loading work.reg_file_sv_unit(fast)
+# Loading work.reg_file(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.clock_gating(fast)
+# Loading work.sys_controller_sv_unit(fast)
+# Loading work.SYS_CTRL(fast)
+# Loading work.top_fsm(fast)
+# Loading work.alu_fsm(fast)
+# Loading work.reg_file_fsm(fast)
+# Loading work.clk_div(fast)
+# Loading work.TX_sv_unit(fast)
+# Loading work.UART_TX(fast)
+# Loading work.FSM_controller_sv_unit(fast)
+# Loading work.FSM_controller(fast)
+# Loading work.serializer_sv_unit(fast)
+# Loading work.serializer(fast)
+# Loading work.parity_calc_sv_unit(fast)
+# Loading work.parity_calc(fast)
+# Loading work.mux_4_1(fast)
+# Loading work.latche_data(fast)
+# Loading work.RX_sv_unit(fast)
+# Loading work.UART_RX(fast)
+# Loading work.FSM_sv_unit(fast)
+# Loading work.fsm_controller(fast)
+# Loading work.data_sampling_sv_unit(fast)
+# Loading work.data_sampling(fast)
+# Loading work.edge_bit_counter_sv_unit(fast)
+# Loading work.edge_bit_counter(fast)
+# Loading work.parity_check(fast)
+# Loading work.strt_check(fast)
+# Loading work.stp_check(fast)
+# Loading work.deserializer_sv_unit(fast)
+# Loading work.deserializer(fast)
+# Loading work.Data_Sync(fast)
+# Loading work.PULSE_GEN(fast)
+# Loading work.fifo1(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.fifomem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.wptr_full(fast)
+# hexadecimal
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=32  
+# gener_out = 502
+# expec_out = 502
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=32  
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=32  
+# Case_1_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=32  
+# Case_2_Done.......
+# Case_3_Done.......
+# Case_4_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=32  
+# Case_5_Done.......
+# Case_6_Done.......
+# gener_out = 506
+# expec_out = 506
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=32  
+# Case_7_Done.......
+# Case_8_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=32  
+# Case_9_Done.......
+# Case_10_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=32  
+# Case_11_Done.......
+# Case_12_Done.......
+# Case_13_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=32  
+# Case_14_Done.......
+# Case_15_Done.......
+# gener_out = 700
+# expec_out = 700
+# Read Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=32  
+# Case_16_Done.......
+# Case_17_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=32  
+# Case_18_Done.......
+# Case_19_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=32  
+# Case_20_Done.......
+# Case_21_Done.......
+# Case_22_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=16  
+# Case_23_Done.......
+# Case_24_Done.......
+# gener_out = 482
+# expec_out = 482
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=16  
+# Case_25_Done.......
+# Case_26_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=16  
+# Case_27_Done.......
+# Case_28_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=16  
+# Case_29_Done.......
+# End of Configuration 4
+# Case_30_Done.......
+# Case_31_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=16  
+# Case_32_Done.......
+# Case_33_Done.......
+# gener_out = 486
+# expec_out = 486
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=16  
+# Case_34_Done.......
+# Case_35_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=16  
+# Case_36_Done.......
+# Case_37_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=16  
+# Case_38_Done.......
+# End of Configuration 5
+# Case_39_Done.......
+# Case_40_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=16  
+# Case_41_Done.......
+# Case_42_Done.......
+# gener_out = 680
+# expec_out = 680
+# Read Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=16  
+# Case_43_Done.......
+# Case_44_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=16  
+# Case_45_Done.......
+# Case_45_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=16  
+# Case_46_Done.......
+# End of Configuration 6
+# Case_47_Done.......
+# Case_48_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE= 8  
+# Case_49_Done.......
+# Case_50_Done.......
+# gener_out = 442
+# expec_out = 442
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE= 8  
+# Case_50_Done.......
+# Case_51_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE= 8  
+# Case_52_Done.......
+# Case_53_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE= 8  
+# Case_54_Done.......
+# End of Configuration 7
+# Case_55_Done.......
+# Case_56_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE= 8  
+# Case_57_Done.......
+# Case_58_Done.......
+# gener_out = 446
+# expec_out = 446
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE= 8  
+# Case_59_Done.......
+# Case_60_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE= 8  
+# Case_61_Done.......
+# Case_62_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE= 8  
+# Case_63_Done.......
+# End of Configuration 8
+# Case_64_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE= 8  
+# Case_65_Done.......
+# Case_66_Done.......
+# gener_out = 640
+# expec_out = 640
+# Read Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE= 8  
+# Case_67_Done.......
+# Case_68_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE= 8  
+# Case_69_Done.......
+# Case_70_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE= 8  
+# Case_71_Done.......
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# ** Note: $stop    : SYS_TOP_TB.sv(544)
+#    Time: 24403878430 ps  Iteration: 0  Instance: /SYS_TOP_TBBBB
+# Break in Module SYS_TOP_TBBBB at SYS_TOP_TB.sv line 544
+# 0 ps
+# 25624072352 ps
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vmap 2024.1 Lib Mapping Utility 2024.02 Feb  1 2024
+# vmap work work 
+# Modifying modelsim.ini
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:41 on Jan 27,2026
+# vlog -reportprogress 300 -sv SYS_PACKAGE.sv 
+# -- Compiling package SYS_PACKAGE
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:19:41 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:42 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../uart_tx_rx/FSM.sv ../uart_tx_rx/FSM_controller.sv ../uart_tx_rx/RX.sv ../uart_tx_rx/TX.sv ../uart_tx_rx/Tx_Rx_Wrapper.sv ../uart_tx_rx/Tx_Rx_Wrapper_tb.sv ../uart_tx_rx/UART_PACKAGE.sv ../uart_tx_rx/data_sampling.sv ../uart_tx_rx/deserializer.sv ../uart_tx_rx/edge_bit_counter.sv ../uart_tx_rx/mux4_1.sv ../uart_tx_rx/parity_calc.sv ../uart_tx_rx/parity_check.sv ../uart_tx_rx/serializer.sv ../uart_tx_rx/start_check.sv ../uart_tx_rx/stop_check.sv 
+# -- Compiling package FSM_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module fsm_controller
+# -- Compiling package FSM_controller_sv_unit
+# -- Compiling module FSM_controller
+# -- Compiling package RX_sv_unit
+# -- Compiling module UART_RX
+# -- Compiling package TX_sv_unit
+# -- Compiling module UART_TX
+# -- Compiling module latche_data
+# -- Compiling package UART_PACKAGE
+# -- Compiling package Tx_Rx_Wrapper_sv_unit
+# -- Importing package UART_PACKAGE
+# -- Compiling module Tx_Rx_Wrapper
+# -- Compiling module Tx_Rx_Wrapper_tb
+# -- Compiling package UART_PACKAGE
+# ** Warning: ../uart_tx_rx/UART_PACKAGE.sv(1): (vlog-2275) Existing package 'UART_PACKAGE' at line 1 will be overwritten.
+# -- Compiling package data_sampling_sv_unit
+# -- Compiling module data_sampling
+# -- Compiling package deserializer_sv_unit
+# -- Compiling module deserializer
+# -- Compiling package edge_bit_counter_sv_unit
+# -- Compiling module edge_bit_counter
+# -- Compiling module mux_4_1
+# -- Compiling package parity_calc_sv_unit
+# -- Compiling module parity_calc
+# -- Compiling module parity_check
+# -- Compiling package serializer_sv_unit
+# -- Compiling module serializer
+# -- Compiling module strt_check
+# -- Compiling module stp_check
+# 
+# Top level modules:
+# 	Tx_Rx_Wrapper_tb
+# End time: 23:19:42 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:42 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../puls_gen/puls_gen.sv 
+# -- Compiling module PULSE_GEN
+# 
+# Top level modules:
+# 	PULSE_GEN
+# End time: 23:19:42 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:42 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../reset_synch/reset_synch.sv 
+# -- Compiling module RST_SYNC
+# 
+# Top level modules:
+# 	RST_SYNC
+# End time: 23:19:42 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:42 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../reg_file/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 23:19:42 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:42 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../alu/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:19:42 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:43 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../data_synch/data_sync.sv 
+# -- Compiling module Data_Sync
+# 
+# Top level modules:
+# 	Data_Sync
+# End time: 23:19:43 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:43 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../clock_gating/clock_gating.sv 
+# -- Compiling module clock_gating
+# 
+# Top level modules:
+# 	clock_gating
+# End time: 23:19:43 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:43 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../clock_divider/clk_div.sv 
+# -- Compiling module clk_div
+# 
+# Top level modules:
+# 	clk_div
+# End time: 23:19:43 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:43 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../asynch_fifo/fifo1.sv ../asynch_fifo/fifomem.sv ../asynch_fifo/rptr_empty.sv ../asynch_fifo/sync_r2w.sv ../asynch_fifo/sync_w2r.sv ../asynch_fifo/wptr_full.sv 
+# -- Compiling module fifo1
+# -- Compiling module fifomem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# 
+# Top level modules:
+# 	fifo1
+# End time: 23:19:43 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:43 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/reg_file_fsm/reg_file_fsm.sv 
+# -- Compiling module reg_file_fsm
+# 
+# Top level modules:
+# 	reg_file_fsm
+# End time: 23:19:43 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:43 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/alu_fsm/alu_fsm.sv 
+# -- Compiling module alu_fsm
+# 
+# Top level modules:
+# 	alu_fsm
+# End time: 23:19:44 on Jan 27,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:44 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/top_fsm/top_fsm.sv 
+# -- Compiling module top_fsm
+# 
+# Top level modules:
+# 	top_fsm
+# End time: 23:19:44 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:44 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/sys_controller.sv 
+# -- Compiling package sys_controller_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module SYS_CTRL
+# 
+# Top level modules:
+# 	SYS_CTRL
+# End time: 23:19:44 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:44 on Jan 27,2026
+# vlog -reportprogress 300 -sv top_sys.sv 
+# -- Compiling package top_sys_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module SYS_TOP
+# -- Compiling module clk_multiplier
+# 
+# Top level modules:
+# 	SYS_TOP
+# 	clk_multiplier
+# End time: 23:19:44 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:19:44 on Jan 27,2026
+# vlog -reportprogress 300 -sv SYS_TOP_TB.sv 
+# -- Compiling module SYS_TOP_TBBBB
+# 
+# Top level modules:
+# 	SYS_TOP_TBBBB
+# End time: 23:19:44 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:19:46 on Jan 27,2026, Elapsed time: 0:04:33
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.SYS_TOP_TBBBB 
+# Start time: 23:19:46 on Jan 27,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.SYS_TOP_TBBBB(fast)
+# Loading work.SYS_PACKAGE(fast)
+# Loading work.top_sys_sv_unit(fast)
+# Loading work.SYS_TOP(fast)
+# Loading work.RST_SYNC(fast)
+# Loading work.reg_file_sv_unit(fast)
+# Loading work.reg_file(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.clock_gating(fast)
+# Loading work.sys_controller_sv_unit(fast)
+# Loading work.SYS_CTRL(fast)
+# Loading work.top_fsm(fast)
+# Loading work.alu_fsm(fast)
+# Loading work.reg_file_fsm(fast)
+# Loading work.clk_div(fast)
+# Loading work.TX_sv_unit(fast)
+# Loading work.UART_TX(fast)
+# Loading work.FSM_controller_sv_unit(fast)
+# Loading work.FSM_controller(fast)
+# Loading work.serializer_sv_unit(fast)
+# Loading work.serializer(fast)
+# Loading work.parity_calc_sv_unit(fast)
+# Loading work.parity_calc(fast)
+# Loading work.mux_4_1(fast)
+# Loading work.latche_data(fast)
+# Loading work.RX_sv_unit(fast)
+# Loading work.UART_RX(fast)
+# Loading work.FSM_sv_unit(fast)
+# Loading work.fsm_controller(fast)
+# Loading work.data_sampling_sv_unit(fast)
+# Loading work.data_sampling(fast)
+# Loading work.edge_bit_counter_sv_unit(fast)
+# Loading work.edge_bit_counter(fast)
+# Loading work.parity_check(fast)
+# Loading work.strt_check(fast)
+# Loading work.stp_check(fast)
+# Loading work.deserializer_sv_unit(fast)
+# Loading work.deserializer(fast)
+# Loading work.Data_Sync(fast)
+# Loading work.PULSE_GEN(fast)
+# Loading work.fifo1(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.fifomem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.wptr_full(fast)
+# hexadecimal
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=32  
+# gener_out = 502
+# expec_out = 502
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=32  
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=32  
+# Case_1_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=32  
+# Case_2_Done.......
+# Case_3_Done.......
+# Case_4_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=32  
+# Case_5_Done.......
+# Case_6_Done.......
+# gener_out = 506
+# expec_out = 506
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=32  
+# Case_7_Done.......
+# Case_8_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=32  
+# Case_9_Done.......
+# Case_10_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=32  
+# Case_11_Done.......
+# Case_12_Done.......
+# Case_13_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=32  
+# Case_14_Done.......
+# Case_15_Done.......
+# gener_out = 700
+# expec_out = 700
+# Read Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=32  
+# Case_16_Done.......
+# Case_17_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=32  
+# Case_18_Done.......
+# Case_19_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=32  
+# Case_20_Done.......
+# Case_21_Done.......
+# Case_22_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=16  
+# Case_23_Done.......
+# Case_24_Done.......
+# gener_out = 482
+# expec_out = 482
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=16  
+# Case_25_Done.......
+# Case_26_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=16  
+# Case_27_Done.......
+# Case_28_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=16  
+# Case_29_Done.......
+# End of Configuration 4
+# Case_30_Done.......
+# Case_31_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=16  
+# Case_32_Done.......
+# Case_33_Done.......
+# gener_out = 486
+# expec_out = 486
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=16  
+# Case_34_Done.......
+# Case_35_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=16  
+# Case_36_Done.......
+# Case_37_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE=16  
+# Case_38_Done.......
+# End of Configuration 5
+# Case_39_Done.......
+# Case_40_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=16  
+# Case_41_Done.......
+# Case_42_Done.......
+# gener_out = 680
+# expec_out = 680
+# Read Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=16  
+# Case_43_Done.......
+# Case_44_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=16  
+# Case_45_Done.......
+# Case_45_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE=16  
+# Case_46_Done.......
+# End of Configuration 6
+# Case_47_Done.......
+# Case_48_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE= 8  
+# Case_49_Done.......
+# Case_50_Done.......
+# gener_out = 442
+# expec_out = 442
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE= 8  
+# Case_50_Done.......
+# Case_51_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE= 8  
+# Case_52_Done.......
+# Case_53_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE= 8  
+# Case_54_Done.......
+# End of Configuration 7
+# Case_55_Done.......
+# Case_56_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE= 8  
+# Case_57_Done.......
+# Case_58_Done.......
+# gener_out = 446
+# expec_out = 446
+# Read Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE= 8  
+# Case_59_Done.......
+# Case_60_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE= 8  
+# Case_61_Done.......
+# Case_62_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=1  PRESCALE= 8  
+# Case_63_Done.......
+# End of Configuration 8
+# Case_64_Done.......
+# Check Wrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# Check Rdddddddddddddddddddddddddddddddddd
+# Write Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE= 8  
+# Case_65_Done.......
+# Case_66_Done.......
+# gener_out = 640
+# expec_out = 640
+# Read Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE= 8  
+# Case_67_Done.......
+# Case_68_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE= 8  
+# Case_69_Done.......
+# Case_70_Done.......
+# ALU Operation is succeeded with configurations PARITY_ENABLE=0 PARITY_TYPE=0  PRESCALE= 8  
+# Case_71_Done.......
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# Mabrooooooooooooooooooooooooooooooook You Are Winner.
+# ** Note: $stop    : SYS_TOP_TB.sv(544)
+#    Time: 24403878430 ps  Iteration: 0  Instance: /SYS_TOP_TBBBB
+# Break in Module SYS_TOP_TBBBB at SYS_TOP_TB.sv line 544
+# 0 ps
+# 25624072352 ps
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vmap 2024.1 Lib Mapping Utility 2024.02 Feb  1 2024
+# vmap work work 
+# Modifying modelsim.ini
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:34 on Jan 27,2026
+# vlog -reportprogress 300 -sv SYS_PACKAGE.sv 
+# -- Compiling package SYS_PACKAGE
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:21:34 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:34 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../uart_tx_rx/FSM.sv ../uart_tx_rx/FSM_controller.sv ../uart_tx_rx/RX.sv ../uart_tx_rx/TX.sv ../uart_tx_rx/Tx_Rx_Wrapper.sv ../uart_tx_rx/Tx_Rx_Wrapper_tb.sv ../uart_tx_rx/UART_PACKAGE.sv ../uart_tx_rx/data_sampling.sv ../uart_tx_rx/deserializer.sv ../uart_tx_rx/edge_bit_counter.sv ../uart_tx_rx/mux4_1.sv ../uart_tx_rx/parity_calc.sv ../uart_tx_rx/parity_check.sv ../uart_tx_rx/serializer.sv ../uart_tx_rx/start_check.sv ../uart_tx_rx/stop_check.sv 
+# -- Compiling package FSM_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module fsm_controller
+# -- Compiling package FSM_controller_sv_unit
+# -- Compiling module FSM_controller
+# -- Compiling package RX_sv_unit
+# -- Compiling module UART_RX
+# -- Compiling package TX_sv_unit
+# -- Compiling module UART_TX
+# -- Compiling module latche_data
+# -- Compiling package UART_PACKAGE
+# -- Compiling package Tx_Rx_Wrapper_sv_unit
+# -- Importing package UART_PACKAGE
+# -- Compiling module Tx_Rx_Wrapper
+# -- Compiling module Tx_Rx_Wrapper_tb
+# -- Compiling package UART_PACKAGE
+# ** Warning: ../uart_tx_rx/UART_PACKAGE.sv(1): (vlog-2275) Existing package 'UART_PACKAGE' at line 1 will be overwritten.
+# -- Compiling package data_sampling_sv_unit
+# -- Compiling module data_sampling
+# -- Compiling package deserializer_sv_unit
+# -- Compiling module deserializer
+# -- Compiling package edge_bit_counter_sv_unit
+# -- Compiling module edge_bit_counter
+# -- Compiling module mux_4_1
+# -- Compiling package parity_calc_sv_unit
+# -- Compiling module parity_calc
+# -- Compiling module parity_check
+# -- Compiling package serializer_sv_unit
+# -- Compiling module serializer
+# -- Compiling module strt_check
+# -- Compiling module stp_check
+# 
+# Top level modules:
+# 	Tx_Rx_Wrapper_tb
+# End time: 23:21:34 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:35 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../puls_gen/puls_gen.sv 
+# -- Compiling module PULSE_GEN
+# 
+# Top level modules:
+# 	PULSE_GEN
+# End time: 23:21:35 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:35 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../reset_synch/reset_synch.sv 
+# -- Compiling module RST_SYNC
+# 
+# Top level modules:
+# 	RST_SYNC
+# End time: 23:21:35 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:35 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../reg_file/reg_file.sv 
+# -- Compiling package reg_file_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 23:21:35 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:35 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../alu/ALU.sv 
+# -- Compiling package ALU_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:21:35 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:35 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../data_synch/data_sync.sv 
+# -- Compiling module Data_Sync
+# 
+# Top level modules:
+# 	Data_Sync
+# End time: 23:21:35 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:35 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../clock_gating/clock_gating.sv 
+# -- Compiling module clock_gating
+# 
+# Top level modules:
+# 	clock_gating
+# End time: 23:21:36 on Jan 27,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:36 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../clock_divider/clk_div.sv 
+# -- Compiling module clk_div
+# 
+# Top level modules:
+# 	clk_div
+# End time: 23:21:36 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:36 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../asynch_fifo/fifo1.sv ../asynch_fifo/fifomem.sv ../asynch_fifo/rptr_empty.sv ../asynch_fifo/sync_r2w.sv ../asynch_fifo/sync_w2r.sv ../asynch_fifo/wptr_full.sv 
+# -- Compiling module fifo1
+# -- Compiling module fifomem
+# -- Compiling module rptr_empty
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module wptr_full
+# 
+# Top level modules:
+# 	fifo1
+# End time: 23:21:36 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:36 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/reg_file_fsm/reg_file_fsm.sv 
+# -- Compiling module reg_file_fsm
+# 
+# Top level modules:
+# 	reg_file_fsm
+# End time: 23:21:36 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:36 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/alu_fsm/alu_fsm.sv 
+# -- Compiling module alu_fsm
+# 
+# Top level modules:
+# 	alu_fsm
+# End time: 23:21:36 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:36 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/top_fsm/top_fsm.sv 
+# -- Compiling module top_fsm
+# 
+# Top level modules:
+# 	top_fsm
+# End time: 23:21:36 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:36 on Jan 27,2026
+# vlog -reportprogress 300 -sv ../sys_ctrl/sys_controller.sv 
+# -- Compiling package sys_controller_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module SYS_CTRL
+# 
+# Top level modules:
+# 	SYS_CTRL
+# End time: 23:21:36 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:37 on Jan 27,2026
+# vlog -reportprogress 300 -sv top_sys.sv 
+# -- Compiling package top_sys_sv_unit
+# -- Importing package SYS_PACKAGE
+# -- Compiling module SYS_TOP
+# -- Compiling module clk_multiplier
+# 
+# Top level modules:
+# 	SYS_TOP
+# 	clk_multiplier
+# End time: 23:21:37 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:21:37 on Jan 27,2026
+# vlog -reportprogress 300 -sv SYS_TOP_TB.sv 
+# -- Compiling module SYS_TOP_TBBBB
+# 
+# Top level modules:
+# 	SYS_TOP_TBBBB
+# End time: 23:21:37 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:21:38 on Jan 27,2026, Elapsed time: 0:01:52
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.SYS_TOP_TBBBB 
+# Start time: 23:21:38 on Jan 27,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.SYS_TOP_TBBBB(fast)
+# Loading work.SYS_PACKAGE(fast)
+# Loading work.top_sys_sv_unit(fast)
+# Loading work.SYS_TOP(fast)
+# Loading work.RST_SYNC(fast)
+# Loading work.reg_file_sv_unit(fast)
+# Loading work.reg_file(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.clock_gating(fast)
+# Loading work.sys_controller_sv_unit(fast)
+# Loading work.SYS_CTRL(fast)
+# Loading work.top_fsm(fast)
+# Loading work.alu_fsm(fast)
+# Loading work.reg_file_fsm(fast)
+# Loading work.clk_div(fast)
+# Loading work.TX_sv_unit(fast)
+# Loading work.UART_TX(fast)
+# Loading work.FSM_controller_sv_unit(fast)
+# Loading work.FSM_controller(fast)
+# Loading work.serializer_sv_unit(fast)
+# Loading work.serializer(fast)
+# Loading work.parity_calc_sv_unit(fast)
+# Loading work.parity_calc(fast)
+# Loading work.mux_4_1(fast)
+# Loading work.latche_data(fast)
+# Loading work.RX_sv_unit(fast)
+# Loading work.UART_RX(fast)
+# Loading work.FSM_sv_unit(fast)
+# Loading work.fsm_controller(fast)
+# Loading work.data_sampling_sv_unit(fast)
+# Loading work.data_sampling(fast)
+# Loading work.edge_bit_counter_sv_unit(fast)
+# Loading work.edge_bit_counter(fast)
+# Loading work.parity_check(fast)
+# Loading work.strt_check(fast)
+# Loading work.stp_check(fast)
+# Loading work.deserializer_sv_unit(fast)
+# Loading work.deserializer(fast)
+# Loading work.Data_Sync(fast)
+# Loading work.PULSE_GEN(fast)
+# Loading work.fifo1(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.fifomem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.wptr_full(fast)
+# hexadecimal
+# 
+# ============================================================
+#      SYSTEM LEVEL VERIFICATION STARTING - IC DESIGN     
+# ============================================================
+# 
+# [TIME: 60000] System Reset Completed.
+# 
+# [TIME: 60000] --- Starting Configuration 1 ---
+# [CFG] Prescale: 32 | Parity: Enabled | Type: EVEN
+# ------------------------------------------------------------
+# [TIME: 60000] CMD: WRITE | Addr: 0x06 | Data: 0xa5
+#  >>> [PASS] Write Success at Addr: 0x06
+# [TIME: 291830000] CMD: READ | Addr: 0x02
+#  >>> [PASS] Read Match! Data Received: 0x81
+# [TIME: 625408000] CMD: ALU_WOP | OP_A: 100 | OP_B:  50 | Func:   1
+#  >>> [PASS] ALU Output Match! Result:    50
+# [TIME: 1259090000] CMD: ALU_WNOP | Func:   0
+#  >>> [PASS] ALU Output Match! Result:   150
+# 
+# [TIME: 1701800000] --- Starting Configuration 2 ---
+# [CFG] Prescale: 32 | Parity: Enabled | Type: ODD
+# ------------------------------------------------------------
+# [TIME: 1701800000] CMD: WRITE | Addr: 0x02 | Data: 0x83
+# [TIME: 1983919000] CMD: WRITE | Addr: 0x06 | Data: 0xa5
+#  >>> [PASS] Write Success at Addr: 0x06
+# [TIME: 2280230000] CMD: READ | Addr: 0x02
+#  >>> [PASS] Read Match! Data Received: 0x83
+# [TIME: 2613260000] CMD: ALU_WOP | OP_A: 100 | OP_B:  50 | Func:   1
+#  >>> [PASS] ALU Output Match! Result:    50
+# [TIME: 3246942000] CMD: ALU_WNOP | Func:   0
+#  >>> [PASS] ALU Output Match! Result:   150
+# 
+# [TIME: 3689652000] --- Starting Configuration 3 ---
+# [CFG] Prescale: 32 | Parity: Disabled | Type: N/A
+# ------------------------------------------------------------
+# [TIME: 3689652000] CMD: WRITE | Addr: 0x02 | Data: 0x80
+# [TIME: 3971770000] CMD: WRITE | Addr: 0x06 | Data: 0xa5
+#  >>> [PASS] Write Success at Addr: 0x06
+# [TIME: 4242050000] CMD: READ | Addr: 0x02
+#  >>> [PASS] Read Match! Data Received: 0x80
+# [TIME: 4557709000] CMD: ALU_WOP | OP_A: 100 | OP_B:  50 | Func:   1
+#  >>> [PASS] ALU Output Match! Result:    50
+# [TIME: 5147988000] CMD: ALU_WNOP | Func:   0
+#  >>> [PASS] ALU Output Match! Result:   150
+# 
+# [TIME: 5564656000] --- Starting Configuration 4 ---
+# [CFG] Prescale: 16 | Parity: Enabled | Type: EVEN
+# ------------------------------------------------------------
+# [TIME: 5564656000] CMD: WRITE | Addr: 0x02 | Data: 0x41
+# [TIME: 5820733000] CMD: WRITE | Addr: 0x06 | Data: 0xa5
+#  >>> [PASS] Write Success at Addr: 0x06
+# [TIME: 6118130000] CMD: READ | Addr: 0x02
+#  >>> [PASS] Read Match! Data Received: 0x41
+# [TIME: 6450075000] CMD: ALU_WOP | OP_A: 100 | OP_B:  50 | Func:   1
+#  >>> [PASS] ALU Output Match! Result:    50
+# [TIME: 7083757000] CMD: ALU_WNOP | Func:   0
+#  >>> [PASS] ALU Output Match! Result:   150
+# 
+# [TIME: 7526466000] --- Starting Configuration 5 ---
+# [CFG] Prescale: 16 | Parity: Enabled | Type: ODD
+# ------------------------------------------------------------
+# [TIME: 7526466000] CMD: WRITE | Addr: 0x02 | Data: 0x43
+# [TIME: 7808585000] CMD: WRITE | Addr: 0x06 | Data: 0xa5
+#  >>> [PASS] Write Success at Addr: 0x06
+# [TIME: 8105990000] CMD: READ | Addr: 0x02
+#  >>> [PASS] Read Match! Data Received: 0x43
+# [TIME: 8437927000] CMD: ALU_WOP | OP_A: 100 | OP_B:  50 | Func:   1
+#  >>> [PASS] ALU Output Match! Result:    50
+# [TIME: 9071609000] CMD: ALU_WNOP | Func:   0
+#  >>> [PASS] ALU Output Match! Result:   150
+# 
+# [TIME: 9514318000] --- Starting Configuration 6 ---
+# [CFG] Prescale: 16 | Parity: Disabled | Type: N/A
+# ------------------------------------------------------------
+# [TIME: 9514318000] CMD: WRITE | Addr: 0x02 | Data: 0x40
+# [TIME: 9796437000] CMD: WRITE | Addr: 0x06 | Data: 0xa5
+#  >>> [PASS] Write Success at Addr: 0x06
+# [TIME: 10067790000] CMD: READ | Addr: 0x02
+#  >>> [PASS] Read Match! Data Received: 0x40
+# [TIME: 10382376000] CMD: ALU_WOP | OP_A: 100 | OP_B:  50 | Func:   1
+#  >>> [PASS] ALU Output Match! Result:    50
+# [TIME: 10972655000] CMD: ALU_WNOP | Func:   0
+#  >>> [PASS] ALU Output Match! Result:   150
+# 
+# [TIME: 11389323000] --- Starting Configuration 7 ---
+# [CFG] Prescale: 8 | Parity: Enabled | Type: EVEN
+# ------------------------------------------------------------
+# [TIME: 11389323000] CMD: WRITE | Addr: 0x02 | Data: 0x21
+# [TIME: 11671441000] CMD: WRITE | Addr: 0x06 | Data: 0xa5
+#  >>> [PASS] Write Success at Addr: 0x06
+# [TIME: 11967490000] CMD: READ | Addr: 0x02
+#  >>> [PASS] Read Match! Data Received: 0x21
+# [TIME: 12292103000] CMD: ALU_WOP | OP_A: 100 | OP_B:  50 | Func:   1
+#  >>> [PASS] ALU Output Match! Result:    50
+# [TIME: 12925785000] CMD: ALU_WNOP | Func:   0
+#  >>> [PASS] ALU Output Match! Result:   150
+# 
+# [TIME: 13359813000] --- Starting Configuration 8 ---
+# [CFG] Prescale: 8 | Parity: Enabled | Type: ODD
+# ------------------------------------------------------------
+# [TIME: 13359813000] CMD: WRITE | Addr: 0x02 | Data: 0x23
+# [TIME: 13667974000] CMD: WRITE | Addr: 0x06 | Data: 0xa5
+#  >>> [PASS] Write Success at Addr: 0x06
+# [TIME: 13964010000] CMD: READ | Addr: 0x02
+#  >>> [PASS] Read Match! Data Received: 0x23
+# [TIME: 14288635000] CMD: ALU_WOP | OP_A: 100 | OP_B:  50 | Func:   1
+#  >>> [PASS] ALU Output Match! Result:    50
+# [TIME: 14922317000] CMD: ALU_WNOP | Func:   0
+#  >>> [PASS] ALU Output Match! Result:   150
+# 
+# [TIME: 15356346000] --- Starting Configuration 9 ---
+# [CFG] Prescale: 8 | Parity: Disabled | Type: N/A
+# ------------------------------------------------------------
+# [TIME: 15356346000] CMD: WRITE | Addr: 0x02 | Data: 0x20
+# [TIME: 15638465000] CMD: WRITE | Addr: 0x06 | Data: 0xa5
+#  >>> [PASS] Write Success at Addr: 0x06
+# [TIME: 15916070000] CMD: READ | Addr: 0x02
+#  >>> [PASS] Read Match! Data Received: 0x20
+# [TIME: 17905723000] CMD: ALU_WOP | OP_A: 100 | OP_B:  50 | Func:   1
+#  >>> [PASS] ALU Output Match! Result:    50
+# [TIME: 21722463000] CMD: ALU_WNOP | Func:   0
+#  >>> [PASS] ALU Output Match! Result:   150
+# 
+# ============================================================
+#                   FINAL VERIFICATION REPORT                 
+# ============================================================
+#  TOTAL TESTCASES :          36
+#  PASSED          :          36
+#  FAILED          :           0
+# ============================================================
+#  RESULT: [PASS] - CHAMPION! YOU ARE THE WINNER!
+# ============================================================
+# 
+# ** Note: $stop    : SYS_TOP_TB.sv(163)
+#    Time: 24403878430 ps  Iteration: 0  Instance: /SYS_TOP_TBBBB
+# Break in Module SYS_TOP_TBBBB at SYS_TOP_TB.sv line 163
+# 0 ps
+# 25624072352 ps

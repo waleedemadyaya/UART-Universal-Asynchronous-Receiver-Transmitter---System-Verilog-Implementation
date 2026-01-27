@@ -17,6 +17,7 @@ module alu_fsm #(
     // Interface to ALU
     output logic [ALU_FUN_WIDTH-1 : 0] o_Func,
     output logic                      o_EN,
+    output logic                      o_CLK_EN,
     output logic [ALU_OUT_WIDTH-1 : 0] o_ALU_OUT,
     input  logic                      i_OUT_Valid,
     input  logic [ALU_OUT_WIDTH-1 : 0] i_ALU_OUT,
@@ -49,6 +50,7 @@ module alu_fsm #(
         o_read_operands = 1'b0;
         o_Func          = r_latched_func; // Output the latched function
         o_EN            = 1'b0;
+        o_CLK_EN        = 1'b0;
         o_alu_done      = 1'b0;
 
         case(curr_state)
@@ -61,19 +63,23 @@ module alu_fsm #(
 
             READ_OPERANDS: begin
                 o_read_operands = 1'b1;
+                o_CLK_EN = 1'b1;
                 if (i_read_operands_done) next_state = WAIT_FUNC;
             end
 
             WAIT_FUNC: begin
+                o_CLK_EN = 1'b1;
                 if (data_synchronizer_valid) next_state = CALC;
             end
 
             CALC: begin
                 o_EN = 1'b1;
+                o_CLK_EN = 1'b1;
                 if (i_OUT_Valid) next_state = DONE;
             end
 
             DONE: begin
+                o_CLK_EN = 1'b1;
                 o_alu_done = 1'b1;
                 next_state = IDLE;
             end

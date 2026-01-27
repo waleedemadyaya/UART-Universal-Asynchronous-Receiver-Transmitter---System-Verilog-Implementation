@@ -1,4 +1,4 @@
-import UART_PACKAGE::*;
+import SYS_PACKAGE::*;
 
 module fsm_controller (
     input  logic i_clk,
